@@ -9,7 +9,7 @@ import { FaMapLocationDot } from 'react-icons/fa6'
 import { BsCardText, BsWhatsapp } from 'react-icons/bs'
 import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import cars from '../mooks/cars.json'
+import cars from '../mocks/cars.json'
 
 export default function CarPage() {
   const params = useParams()
