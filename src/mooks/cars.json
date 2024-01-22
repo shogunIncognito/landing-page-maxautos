@@ -1,0 +1,103 @@
+[
+  {
+    "_id": "657ba2d6b8bd7f1ef6ccda32",
+    "brand": "Renault",
+    "model": 2023,
+    "description": "dasdas",
+    "line": "dsaidhu",
+    "kilometers": 23100,
+    "images": [
+      "https://firebasestorage.googleapis.com/v0/b/adminpanelphotos.appspot.com/o/images%2FProyecto-grado-panel%2FDSE432%2Fe450e0f5-2c77-431a-84a4-2a9432e789f1?alt=media&token=86515d56-5d68-48f5-8733-a87feeef3b54",
+      "https://firebasestorage.googleapis.com/v0/b/adminpanelphotos.appspot.com/o/images%2FProyecto-grado-panel%2FDSE432%2Fc9d3a3bb-6ccc-475f-a3c5-c8467c81a9e5?alt=media&token=73bd896c-9d75-4e8e-aab8-3b83c798c8f9"
+    ],
+    "price": 232478923,
+    "preview": "https://firebasestorage.googleapis.com/v0/b/adminpanelphotos.appspot.com/o/images%2FProyecto-grado-panel%2FDSE432%2Fc9d3a3bb-6ccc-475f-a3c5-c8467c81a9e5?alt=media&token=73bd896c-9d75-4e8e-aab8-3b83c798c8f9",
+    "fuel": "corriente",
+    "transmission": "manual",
+    "cc": 1,
+    "type": "automovil",
+    "owners": 4,
+    "plate": "DSE432",
+    "color": "dsadsa",
+    "createdAt": "2023-12-15T00:50:30.834Z",
+    "updatedAt": "2024-01-19T02:23:57.027Z"
+  },
+  {
+    "_id": "657ba223b8bd7aaf1ef6ccda2e",
+    "brand": "RENAULT",
+    "model": 2022,
+    "description": "",
+    "line": "asdji",
+    "kilometers": 23999,
+    "images": [
+      "https://firebasestorage.googleapis.com/v0/b/adminpanelphotos.appspot.com/o/images%2FProyecto-grado-panel%2FDSA234%2F4d897f93-2ac8-43d6-9b72-c2af2c3ad0b7?alt=media&token=07973ad0-e586-4cce-bf62-f3fa291da76d",
+      "https://firebasestorage.googleapis.com/v0/b/adminpanelphotos.appspot.com/o/images%2FProyecto-grado-panel%2FDSA234%2F0c928866-b12b-49d4-93c6-7024045f647c?alt=media&token=18004654-dd2a-4375-8363-5439555a1f70",
+      "https://firebasestorage.googleapis.com/v0/b/adminpanelphotos.appspot.com/o/images%2FProyecto-grado-panel%2FDSA234%2F2adb5d5f-7d65-4cd2-be50-9a7b9acf9810?alt=media&token=32f189b1-7c63-43eb-a178-2fb3a0d31f70",
+      "https://firebasestorage.googleapis.com/v0/b/adminpanelphotos.appspot.com/o/images%2FProyecto-grado-panel%2FDSA234%2F9a1a4255-5e46-46b9-a992-bf329a14cc80?alt=media&token=5b0eed29-e9e8-4ccc-9496-44a4a06f6bed",
+      "https://firebasestorage.googleapis.com/v0/b/adminpanelphotos.appspot.com/o/images%2FProyecto-grado-panel%2FDSA234%2F8957a13e-3498-44bf-bdbd-d06bf110cf76?alt=media&token=4cdf9089-bc10-4e4a-98dc-220949c9696c"
+    ],
+    "price": 2133213123,
+    "preview": "https://firebasestorage.googleapis.com/v0/b/adminpanelphotos.appspot.com/o/images%2FProyecto-grado-panel%2FDSA234%2F0c928866-b12b-49d4-93c6-7024045f647c?alt=media&token=18004654-dd2a-4375-8363-5439555a1f70",
+    "fuel": "corriente",
+    "transmission": "manual",
+    "cc": 1,
+    "type": "automovil",
+    "owners": 3,
+    "plate": "DSA234",
+    "color": "riji",
+    "createdAt": "2023-12-15T00:47:31.867Z",
+    "updatedAt": "2023-12-15T01:13:51.444Z"
+  },
+  {
+    "_id": "657ba223b8bd7f1ef6dfccda2e",
+    "brand": "RENAULT",
+    "model": 2022,
+    "description": "",
+    "line": "asdji",
+    "kilometers": 23999,
+    "images": [
+      "https://firebasestorage.googleapis.com/v0/b/adminpanelphotos.appspot.com/o/images%2FProyecto-grado-panel%2FDSA234%2F4d897f93-2ac8-43d6-9b72-c2af2c3ad0b7?alt=media&token=07973ad0-e586-4cce-bf62-f3fa291da76d",
+      "https://firebasestorage.googleapis.com/v0/b/adminpanelphotos.appspot.com/o/images%2FProyecto-grado-panel%2FDSA234%2F0c928866-b12b-49d4-93c6-7024045f647c?alt=media&token=18004654-dd2a-4375-8363-5439555a1f70",
+      "https://firebasestorage.googleapis.com/v0/b/adminpanelphotos.appspot.com/o/images%2FProyecto-grado-panel%2FDSA234%2F2adb5d5f-7d65-4cd2-be50-9a7b9acf9810?alt=media&token=32f189b1-7c63-43eb-a178-2fb3a0d31f70",
+      "https://firebasestorage.googleapis.com/v0/b/adminpanelphotos.appspot.com/o/images%2FProyecto-grado-panel%2FDSA234%2F9a1a4255-5e46-46b9-a992-bf329a14cc80?alt=media&token=5b0eed29-e9e8-4ccc-9496-44a4a06f6bed",
+      "https://firebasestorage.googleapis.com/v0/b/adminpanelphotos.appspot.com/o/images%2FProyecto-grado-panel%2FDSA234%2F8957a13e-3498-44bf-bdbd-d06bf110cf76?alt=media&token=4cdf9089-bc10-4e4a-98dc-220949c9696c"
+    ],
+    "price": 2133213123,
+    "preview": "https://firebasestorage.googleapis.com/v0/b/adminpanelphotos.appspot.com/o/images%2FProyecto-grado-panel%2FDSA234%2F0c928866-b12b-49d4-93c6-7024045f647c?alt=media&token=18004654-dd2a-4375-8363-5439555a1f70",
+    "fuel": "corriente",
+    "transmission": "manual",
+    "cc": 1,
+    "type": "automovil",
+    "owners": 3,
+    "plate": "DSA234",
+    "color": "riji",
+    "createdAt": "2023-12-15T00:47:31.867Z",
+    "updatedAt": "2023-12-15T01:13:51.444Z"
+  },
+  {
+    "_id": "657ba223b8bd7f1ef6ccdsa2e",
+    "brand": "RENAULT",
+    "model": 2022,
+    "description": "",
+    "line": "asdji",
+    "kilometers": 23999,
+    "images": [
+      "https://firebasestorage.googleapis.com/v0/b/adminpanelphotos.appspot.com/o/images%2FProyecto-grado-panel%2FDSA234%2F4d897f93-2ac8-43d6-9b72-c2af2c3ad0b7?alt=media&token=07973ad0-e586-4cce-bf62-f3fa291da76d",
+      "https://firebasestorage.googleapis.com/v0/b/adminpanelphotos.appspot.com/o/images%2FProyecto-grado-panel%2FDSA234%2F0c928866-b12b-49d4-93c6-7024045f647c?alt=media&token=18004654-dd2a-4375-8363-5439555a1f70",
+      "https://firebasestorage.googleapis.com/v0/b/adminpanelphotos.appspot.com/o/images%2FProyecto-grado-panel%2FDSA234%2F2adb5d5f-7d65-4cd2-be50-9a7b9acf9810?alt=media&token=32f189b1-7c63-43eb-a178-2fb3a0d31f70",
+      "https://firebasestorage.googleapis.com/v0/b/adminpanelphotos.appspot.com/o/images%2FProyecto-grado-panel%2FDSA234%2F9a1a4255-5e46-46b9-a992-bf329a14cc80?alt=media&token=5b0eed29-e9e8-4ccc-9496-44a4a06f6bed",
+      "https://firebasestorage.googleapis.com/v0/b/adminpanelphotos.appspot.com/o/images%2FProyecto-grado-panel%2FDSA234%2F8957a13e-3498-44bf-bdbd-d06bf110cf76?alt=media&token=4cdf9089-bc10-4e4a-98dc-220949c9696c"
+    ],
+    "price": 2133213123,
+    "preview": "https://firebasestorage.googleapis.com/v0/b/adminpanelphotos.appspot.com/o/images%2FProyecto-grado-panel%2FDSA234%2F0c928866-b12b-49d4-93c6-7024045f647c?alt=media&token=18004654-dd2a-4375-8363-5439555a1f70",
+    "fuel": "corriente",
+    "transmission": "manual",
+    "cc": 1,
+    "type": "automovil",
+    "owners": 3,
+    "plate": "DSA234",
+    "color": "riji",
+    "createdAt": "2023-12-15T00:47:31.867Z",
+    "updatedAt": "2023-12-15T01:13:51.444Z"
+  }
+]

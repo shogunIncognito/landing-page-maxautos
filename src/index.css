@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+*::-webkit-scrollbar:vertical {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-button:increment,
+*::-webkit-scrollbar-button {
+  display: none;
+}
+
+*::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(49, 155, 226, 0.74);
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+.slider-conteiner {
+  margin: 0 auto;
+}
+
+#slider-conteiner {
+  margin: 0 auto;
+}
+
+.hola {
+  animation: scroll 40s linear infinite;
+  width: calc(200px * 28);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-200px*14));
+  }
+}
+
+.hola:hover {
+  animation-play-state: paused;
+}
+
+.image-cars {
+  background-image: linear-gradient(0deg,
+      rgba(36, 49, 54, 0.6),
+      rgba(36, 49, 54, 0.6)), url("https://sergioescobar.cl/wp-content/uploads/2020/11/Dejar-auto-en-consignacio%CC%81n_Sergio-Escobar.jpg");
+  background-attachment: fixed;
+  background-position: center;
+}
+
+@media (max-width: 600px) {
+  .placeHolder::placeholder {
+    content: "Placeholder para dispositivo pequeño";
+  }
+}
+
+@media (min-width: 601px) {
+  .placeHolder::placeholder {
+    content: "Placeholder para dispositivo grande";
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.grid-col-res {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
