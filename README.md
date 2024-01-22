@@ -2,7 +2,7 @@
 
 ![MaxLogo-dark](src/assets/maxautoslogoblanco.png#gh-dark-mode-only)![MaxLogo-light](src/assets/maxautosicon.png#gh-dark-mode-only#gh-light-mode-only)
 
-Aplicación para la concesionaria MaxAutos como proyecto final desarrollada en colaboración por [shogunIncognito](https://github.com/shogunIncognito), [Juankio](https://github.com/juankio) y [EmersonR14-dev](https://github.com/EmersonR14-dev).
+Aplicación para la concesionaria MaxAutos como proyecto final desarrollada en colaboración por [shogunIncognito](https://github.com/shogunIncognito), [Juankio](https://github.com/juankio) y [EmersonRoncancio](https://github.com/EmersonRoncancio).
 
 ### Herramientas utilizadas
 - **React.js**: Biblioteca de Javascript para creacion de interfaces de usuario.
