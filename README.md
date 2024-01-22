@@ -11,7 +11,7 @@ Aplicación para la concesionaria MaxAutos como proyecto final desarrollada en c
 
 ## Clonar repositorio en tu maquina
 ```bash
-git clone https://github.com/shogunIncognito/landing-page-maxautos
+git clone https://github.com/shogunIncognito/landing-page-maxautos.git
 ```
 
 ## Accede al repositorio
