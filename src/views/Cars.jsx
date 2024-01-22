@@ -4,7 +4,7 @@ import Input from '../components/Input'
 import Spinner from '../components/Spinner'
 import { LuSearch } from 'react-icons/lu'
 import { useEffect, useState } from 'react'
-import cars from '../mooks/cars.json'
+import cars from '../mocks/cars.json'
 import { useLocation } from 'react-router-dom'
 
 export default function page () {
