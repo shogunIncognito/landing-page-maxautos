@@ -3,8 +3,9 @@ import Tarjetas from '../components/Tarjetas'
 import img from '../assets/maxHero1.jpg'
 import { AiOutlineEye } from 'react-icons/ai'
 import { Link } from 'react-router-dom'
+import Button from '../components/Button'
 
-export default function Index () {
+export default function Index() {
   return (
     <>
       {/* Contenido principal de la pagina inicial '/' */}
@@ -23,30 +24,14 @@ export default function Index () {
             <h1 className='font-mono text-xl font-extrabold my-8 sm:m-5 p-3'>NUESTRAS MARCAS</h1>
             <Carrusel />
           </section>
-          <section className='w-full h-4/6 flex flex-col-reverse lg:flex-row'>
-            <div className='w-full lg:w-[50%] flex items-center justify-center bg-gradient-to-l from-white to-blue-400/80 rounded-lg overflow-hidden'>
-              <div className='flex flex-col text-center justify-center items-center p-8'>
-                <h2 className='text-5xl font-bold text-center m-5'>Max <span className='text-blue-500'>Autos</span> </h2>
-                <p className='m-5 text-xl'>
-                  Empresa <span className='text-blue-700 font-bold'>100%</span> Llanera dedicada a la compra y venta de vehículos usados a nivel Nacional con experiencia en el mercado de más de <span className='text-blue-500 font-bold'>10 años</span>
-                </p>
-                <div className=''>
-                  <Link className='grid transition-colors group place-content-center border-2 border-blue-500 border-solid px-14 py-2 text-black w-[25%] m-5 rounded hover:bg-blue-400 hover:text-white' to='/about'>
-                    <p><AiOutlineEye className='text-blue-500 transition-colors group-hover:text-white' size={24} /></p>
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div className='w-full lg:w-[50%] h-full bg-blue-500'>
-              <img className='w-full h-full object-cover select-none pointer-events-none' src={img} alt='maxautos' />
-            </div>
-          </section>
-
-          <section className='w-full text-center bg-white p-10 '>
-            <h2 className='font-mono font-bold text-xl'>SERVICIOS DE MAX AUTOS</h2>
-            <Tarjetas />
-          </section>
         </div>
+
+        <CardHero />
+
+        <section className='w-full text-center bg-white p-10 '>
+          <h2 className='font-mono font-bold text-xl'>SERVICIOS DE MAX AUTOS</h2>
+          <Tarjetas />
+        </section>
 
       </main>
 
@@ -54,3 +39,29 @@ export default function Index () {
     </>
   )
 }
+
+const CardHero = () => (
+  <div className="flex h-[510px] w-full">
+    <div className="flex flex-col items-center justify-center w-1/2 bg-[#f8f9fa] p-8 text-[#212529]">
+      <h1 className="text-5xl font-bold">Max Autos</h1>
+      <p className="mt-4 text-xl bold opacity-75 text-justify leading-relaxed max-w-2xl">
+        Empresa 100% Llanera dedicada a la compra y venta de vehículos usados a nivel Nacional con experiencia en el
+        mercado de más de 10 años
+      </p>
+      <Button className="mt-6 bg-[#212529] hover:bg-[#666666] text-[#f8f9fa]">Conoce más</Button>
+    </div>
+    <div className="w-1/2">
+      <img
+        alt="Vista aérea de Max Autos"
+        className="h-full w-full object-cover"
+        height="1080"
+        src={img}
+        style={{
+          aspectRatio: "810/1080",
+          objectFit: "cover",
+        }}
+        width="810"
+      />
+    </div>
+  </div>
+)
