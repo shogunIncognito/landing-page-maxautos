@@ -1,4 +1,3 @@
-import { GrUserAdmin } from 'react-icons/gr'
 import iconresponsive from '../assets/maxautosicon.png'
 import { AiFillHome } from 'react-icons/ai'
 import { RiTeamFill } from 'react-icons/ri'

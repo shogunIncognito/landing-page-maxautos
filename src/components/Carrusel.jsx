@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import { brandsCarrousel } from '../helpers/data'
 import { useNavigate } from 'react-router-dom'
 
-export default function Carrusel() {
+export default function Carrusel () {
   const router = useNavigate()
   return (
     <>

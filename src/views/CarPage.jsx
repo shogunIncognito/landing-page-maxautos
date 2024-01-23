@@ -11,7 +11,7 @@ import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import cars from '../mocks/cars.json'
 
-export default function CarPage() {
+export default function CarPage () {
   const params = useParams()
   const loading = false
   const [Translate, setTranslate] = useState(0)

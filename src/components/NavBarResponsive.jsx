@@ -6,7 +6,7 @@ import { useState } from 'react'
 import { AiFillHome } from 'react-icons/ai'
 import { FaCarAlt } from 'react-icons/fa'
 
-export default function NavBarResponsive() {
+export default function NavBarResponsive () {
   const [Boton, setBoton] = useState(false)
 
   return (
