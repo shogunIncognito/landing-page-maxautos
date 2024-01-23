@@ -1,11 +1,11 @@
 import Button from '../components/Button'
 import CarsI from '../components/Cars_i'
 import Input from '../components/Input'
-import Spinner from '../components/Spinner'
 import { LuSearch } from 'react-icons/lu'
 import { useEffect, useState } from 'react'
 import cars from '../mocks/cars.json'
 import { useLocation } from 'react-router-dom'
+import { CarsSkeleton } from '../components/CarsSkeleton'
 
 export default function page () {
   const filterQuery = useLocation().search.split('=')[1]
@@ -50,7 +50,7 @@ export default function page () {
 
       <section id='catalogo'>
         {loading
-          ? <Spinner color='text-blue-400' className='m-4 my-40' />
+          ? <CarsSkeleton />
           : <CarsI result={filteredCars} />}
       </section>
     </>

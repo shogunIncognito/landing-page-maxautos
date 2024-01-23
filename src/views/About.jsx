@@ -1,8 +1,15 @@
 import image1 from '../assets/imagenmaxautos1.jpeg'
+import PhotosGallery from '../components/PhotosGallery'
 
 export default function About () {
   return (
     <>
+
+      <section className='w-full flex-col max-sm:py-5 max-sm:p-0 pt-28 min-[2560px]:p-36 h-auto flex items-center justify-center'>
+        <h2 className='text-4xl font-semibold mb-6 opacity-85'>Nosotros</h2>
+        <PhotosGallery />
+      </section>
+
       <section className='w-full max-sm:py-5 max-sm:p-0 p-28 min-[2560px]:p-36 h-auto flex items-center justify-center'>
         <div className='w-[90%] mt-24 md:mt-10 h-auto flex flex-col items-center justify-center xl:flex-row rounded-md border overflow-hidden bg-slate-100 p-24 max-xl:p-16 max-md:p-2'>
           <div className='w-full xl:w-[50%] h-auto flex items-center justify-center xl:mr-6'>
