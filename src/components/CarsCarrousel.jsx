@@ -5,7 +5,7 @@ import bgvideo from '../assets/carrouselbgvideo.webm'
 export default function CarsCarrousel () {
   return (
     <section className='relative overflow-hidden w-full px-10 py-5 flex justify-center items-center flex-col'>
-      <h2 className='text-4xl z-30 text-center my-7 text-white'>Nuestros últimos autos</h2>
+      <h2 className='md:text-4xl text-2xl z-30 text-center my-7 text-white'>Nuestros últimos autos</h2>
       <Carousel className='w-full z-30 2xl:h-[36rem]' slideInterval={4000} showControls indicators>
         {cars.map((car, index) => (
           <article key={index} className='relative text-white'>

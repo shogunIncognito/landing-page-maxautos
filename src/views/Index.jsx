@@ -13,7 +13,7 @@ export default function Index () {
       <main className='z-10 w-full flex flex-col items-center justify-center'>
 
         <section className='w-full h-[95vh] 2xl:h-[80vh] max-h-[95vh] overflow-hidden bg-black/60 relative flex items-center justify-center text-white'>
-          <div className='space-y-2 flex flex-col items-center'>
+          <div className='space-y-2 flex flex-col mx-10 text-center items-center'>
             <img src={maxautoslogo} alt='logo' className='w-40 mb-3 h-full object-contain' />
             <h1 className='text-3xl font-bold text-center tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none'>
               Encuentra el auto de tus sueños
@@ -54,7 +54,7 @@ export default function Index () {
 const CardHero = () => (
   <div className='flex md:h-[610px] h-[680px] md:flex-row flex-col w-full'>
     <div className='flex flex-col items-center justify-center md:w-1/2 bg-[#f8f9fa] p-14 text-[#212529]'>
-      <h1 className='text-5xl font-bold'>Max Autos</h1>
+      <h1 className='md:text-5xl text-3xl font-bold'>Max Autos</h1>
       <p className='mt-4 text-xl bold opacity-75 text-justify leading-relaxed max-w-2xl'>
         Empresa 100% Llanera dedicada a la compra y venta de vehículos usados a nivel Nacional con experiencia en el
         mercado de más de 10 años

@@ -3,12 +3,12 @@ import MaxIcon from '../assets/maxautoslogoblanco.png'
 export default function Component () {
   return (
     <footer className='bg-[#1DA1F2] p-6 text-white'>
-      <div className='max-w-7xl mx-auto flex-col md:flex-row flex justify-between items-center'>
+      <div className='max-w-7xl mx-auto flex-col md:flex-row gap-7 md:gap-1 flex justify-between items-center'>
         <div className='flex flex-col items-center'>
           <img className='w-28 h-20 my-4' src={MaxIcon} />
           <p className='mt-2 text-sm'>Usados que dan confianza</p>
         </div>
-        <div className='flex flex-col items-start'>
+        <div className='flex flex-col items-center md:items-start'>
           <h3 className='text-lg font-semibold'>CONTACTANOS</h3>
           <div className='flex items-center mt-2'>
             <MailIcon className='h-6 w-6 mr-2 text-white' />
@@ -23,7 +23,7 @@ export default function Component () {
             <p className='text-sm'>maxautosusados</p>
           </div>
         </div>
-        <div className='flex flex-col items-start'>
+        <div className='flex flex-col items-center md:items-start'>
           <div className='flex items-center'>
             <LocateIcon className='h-6 w-6 mr-2 text-white' />
             <p className='text-sm'>Colombia</p>

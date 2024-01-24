@@ -1,6 +1,6 @@
 export default function Cards () {
   return (
-    <div className='flex w-full h-auto md:h-[640px] rounded bg-gray-100 p-10'>
+    <div className='flex w-full h-auto md:h-[640px] rounded bg-gray-100 md:p-10 p-5'>
       <div className='flex flex-col md:flex-row gap-2 w-full'>
 
         <div className='flex flex-col gap-2 md:w-1/2'>
