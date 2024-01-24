@@ -13,6 +13,7 @@ export const CarsSkeleton = () => {
               <Skeleton.Line height='h-[20px] ml-2' />
               <Skeleton.Line height='h-[20px] ml-2' />
               <Skeleton.Line height='h-[20px] ml-2' />
+              <Skeleton.Line height='h-[30px] w-28  ml-2' />
             </div>
           </div>
         </Skeleton>

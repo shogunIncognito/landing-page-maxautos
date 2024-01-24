@@ -3,6 +3,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Geist';
+  src: local('Geist'),
+  url('./fonts/Geist/Geist-Regular.woff2');
+}
+
+#root {
+  font-family: 'Geist';
+}
+
 * {
   margin: 0;
   padding: 0;

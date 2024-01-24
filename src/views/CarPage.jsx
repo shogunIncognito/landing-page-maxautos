@@ -75,8 +75,8 @@ export default function CarPage () {
         <div className='w-full h-auto sm:h-full flex items-center justify-center'>
           <div className='w-[90%] h-auto sm:w-[78%] sm:h-[88%] md:w-[84%] md:h-[100%] lg:w-[95%] lg:h-[95%] min-[1920px]:w-[90%] min-[1920px]:h-[90%] border-2 border-blue-200 rounded-md p-2'>
             <div className='w-full h-[20%] flex flex-col justify-center items-center sm:items-start border-b-2 border-blue-200'>
-              <h1 className='font-mono font-semibold text-2xl min-[1920px]:text-4xl min-[2560px]:text-5xl'>{car.brand} {car.line}</h1>
-              <h1 className='font-mono font-semibold text-2xl min-[1920px]:text-4xl min-[2560px]:text-5xl'><span className='text-blue-400'>$</span> {Math.round(car.price).toLocaleString()}</h1>
+              <h1 className=' font-semibold text-2xl min-[1920px]:text-4xl min-[2560px]:text-5xl'>{car.brand} {car.line}</h1>
+              <h1 className=' font-semibold text-2xl min-[1920px]:text-4xl min-[2560px]:text-5xl'><span className='text-blue-400'>$</span> {Math.round(car.price).toLocaleString()}</h1>
             </div>
             <div className='w-full h-[80%] flex flex-row items-center p-2'>
               <div className='w-[50%] h-full mr-2'>{/* Colmuna 1 */}
