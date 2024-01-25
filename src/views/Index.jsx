@@ -5,6 +5,7 @@ import maxautoslogo from '../assets/maxautoslogoblanco.png'
 import { Link } from 'react-router-dom'
 import Button from '../components/Button'
 import CarsCarrousel from '../components/CarsCarrousel'
+import herovideo from '../assets/maxautosvideo720.webm'
 
 export default function Index () {
   return (
@@ -25,7 +26,7 @@ export default function Index () {
               <Button className='mt-6 bg-[#212529] hover:bg-[#666666] text-[#f8f9fa]'>Explorar</Button>
             </Link>
           </div>
-          <video muted loop autoPlay playsInline className='-z-10 object-cover top-0 w-full h-screen absolute' src='/videomaxapptest.mp4' />
+          <video muted loop autoPlay playsInline className='-z-10 object-cover top-0 w-full h-screen absolute' src={herovideo} />
         </section>
 
         <div className='w-full 2xl:w-[1536px] flex flex-col items-center justify-center'>

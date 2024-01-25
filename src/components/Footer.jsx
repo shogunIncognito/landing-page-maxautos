@@ -1,26 +1,27 @@
+import { Link } from 'react-router-dom'
 import MaxIcon from '../assets/maxautoslogoblanco.png'
 
-export default function Component () {
+export default function Footer () {
   return (
     <footer className='bg-[#1DA1F2] p-6 text-white'>
       <div className='max-w-7xl mx-auto flex-col md:flex-row gap-7 md:gap-1 flex justify-between items-center'>
         <div className='flex flex-col items-center'>
-          <img className='w-28 h-20 my-4' src={MaxIcon} />
-          <p className='mt-2 text-sm'>Usados que dan confianza</p>
+          <img className='w-32 h-auto my-4' src={MaxIcon} />
+          <p className='mt-2 text-md'>Usados que dan confianza</p>
         </div>
         <div className='flex flex-col items-center md:items-start'>
           <h3 className='text-lg font-semibold'>CONTACTANOS</h3>
           <div className='flex items-center mt-2'>
             <MailIcon className='h-6 w-6 mr-2 text-white' />
-            <p className='text-sm'>maxautosmb53@gmail.com</p>
+            <Link to='mailto:maxautosmb53@gmail.com' target='_blank' className='text-sm' rel='noreferrer'>maxautosmb53@gmail.com</Link>
           </div>
           <div className='flex items-center mt-2'>
             <PhoneIcon className='h-6 w-6 mr-2 text-white' />
-            <p className='text-sm'>+57 312 3719021</p>
+            <Link to='https://wa.me/573123719021' target='_blank' className='text-sm' rel='noreferrer'>+57 312 3719021</Link>
           </div>
           <div className='flex items-center mt-2'>
             <InstagramIcon className='h-6 w-6 mr-2 text-white' />
-            <p className='text-sm'>maxautosusados</p>
+            <Link target='_blank' to='https://www.instagram.com/maxautosusados' className='text-sm'>maxautosusados</Link>
           </div>
         </div>
         <div className='flex flex-col items-center md:items-start'>
@@ -34,7 +35,7 @@ export default function Component () {
           </div>
           <div className='flex items-center mt-2'>
             <HomeIcon className='h-6 w-6 mr-2 text-white' />
-            <p className='text-sm'>Cra 22 N. 4b- 27 Barrio Alborada</p>
+            <Link to='/about#maps' className='text-sm'>Cra 22 N. 4b- 27 Barrio Alborada</Link>
           </div>
         </div>
       </div>

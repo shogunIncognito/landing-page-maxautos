@@ -8,9 +8,15 @@ import Index from './views/Index'
 import CarPage from './views/CarPage'
 import { AnimatePresence } from 'framer-motion'
 import AnimatedMotion from './views/AnimatedMotion'
+import { useLayoutEffect } from 'react'
 
 export default function App () {
   const location = useLocation()
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+  }, [location.pathname])
+
   return (
     <>
       <NavBar />

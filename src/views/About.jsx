@@ -7,7 +7,7 @@ export default function About () {
     <>
 
       <section id='weare' className='w-full flex-col max-sm:py-5 max-sm:p-0 pt-28 min-[2560px]:p-36 h-auto flex items-center justify-center'>
-        <h2 className='text-4xl font-semibold mb-6 opacity-85'>Nosotros</h2>
+        <h2 className='md:text-4xl text-2xl mt-16 md:mt-2 font-semibold mb-6 opacity-85'>Nosotros</h2>
         <PhotosGallery />
       </section>
 
