@@ -14,13 +14,11 @@ import cars from '../mocks/cars.json'
 export default function CarPage () {
   const params = useParams()
   const loading = false
-  const [Translate, setTranslate] = useState(0)
+  const [translate, setTranslate] = useState(0)
 
   if (loading) return <Spinner color='text-blue-600' className='h-[80dvh]' />
 
-  const car = cars.find((car) =>
-    String(car._id) === params.id
-  )
+  const car = cars.find((car) => String(car._id) === params.id)
 
   // temporal fix
   if (!car) {
@@ -33,11 +31,11 @@ export default function CarPage () {
 
   const imagenes = car.images
 
-  if (Translate >= imagenes.length * 100) {
+  if (translate >= imagenes.length * 100) {
     setTranslate(0)
   }
 
-  if (Translate <= -100) {
+  if (translate <= -100) {
     setTranslate((imagenes.length - 1) * 100)
   }
 
@@ -47,31 +45,27 @@ export default function CarPage () {
         <div className='w-full h-auto min-[420px]:h-[70vh] sm:h-[90vh] lg:h-[78vh] flex flex-col items-center justify-center pt-5'>
           <div className='w-[90%] md:w-[80%] h-full sm:w-[78%] sm:h-[88%] lg:h-[90%] min-[1920px]:w-[80%] min-[1920px]:h-[80%] min-[2560px]:w-[80%] min-[2560px]:h-[90%] mb-11 lg:mb-9'>
             <div className='w-full max-w-fit h-[80%] border rounded-md overflow-hidden mb-2 flex items-center relative'>
-              <button onClick={() => setTranslate(Translate - 100)} className='text-white absolute z-20 bg-slate-200 rounded-full m-2 p-1'><AiFillCaretLeft className='text-blue-400' size={20} /></button>
-              <button onClick={() => setTranslate(Translate + 100)} className='text-white absolute z-20 bg-slate-200 rounded-full  right-0 m-2 p-1'><AiFillCaretRight className='text-blue-400' size={20} /></button>
-              <div className='w-full object-fill max-w-full h-full flex duration-700' style={{ transform: `translateX(-${Translate}%)` }}>
-                {
-                  imagenes.map((i, index) => (
-                    <div key={index} className='w-full h-full select-none min-w-full'>
-                      <img className='w-full h-full object-fill lg:object-cover object-center select-none' src={i} alt='' />
-                    </div>
-
-                  ))
-                }
+              <button onClick={() => setTranslate(translate - 100)} className='text-white absolute z-20 bg-slate-200 rounded-full m-2 p-1'><AiFillCaretLeft className='text-blue-400' size={20} /></button>
+              <button onClick={() => setTranslate(translate + 100)} className='text-white absolute z-20 bg-slate-200 rounded-full  right-0 m-2 p-1'><AiFillCaretRight className='text-blue-400' size={20} /></button>
+              <div className='w-full object-fill max-w-full h-full flex duration-700' style={{ transform: `translateX(-${translate}%)` }}>
+                {imagenes.map((i, index) => (
+                  <div key={index} className='w-full h-full select-none min-w-full'>
+                    <img className='w-full h-full object-fill lg:object-cover object-center select-none' src={i} alt='' />
+                  </div>
+                ))}
               </div>
 
             </div>
-            <div className='flex h-[20%] select-none bg-blue-200 border rounded-md overflow-x-auto p-1'>
-              {
-                imagenes.map((i, index) => (
-                  <img
-                    onClick={() => setTranslate(index * 100)} key={index + 100} className='w-[15%] cursor-pointer select-none h-full object-cover object-center rounded-md mr-1' src={i} alt=''
-                  />
-                ))
-              }
+            <div className='flex h-[20%] select-none bg-neutral-200 border rounded-md overflow-x-auto p-1'>
+              {imagenes.map((i, index) => (
+                <img
+                  onClick={() => setTranslate(index * 100)} key={index + 100} className='w-[15%] cursor-pointer select-none h-full object-cover object-center rounded-md mr-1' src={i} alt=''
+                />
+              ))}
             </div>
           </div>
         </div>
+
         <div className='w-full h-auto sm:h-full flex items-center justify-center'>
           <div className='w-[90%] h-auto sm:w-[78%] sm:h-[88%] md:w-[84%] md:h-[100%] lg:w-[95%] lg:h-[95%] min-[1920px]:w-[90%] min-[1920px]:h-[90%] border-2 border-blue-200 rounded-md p-2'>
             <div className='w-full h-[20%] flex flex-col justify-center items-center sm:items-start border-b-2 border-blue-200'>
