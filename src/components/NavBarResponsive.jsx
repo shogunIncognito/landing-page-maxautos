@@ -24,12 +24,12 @@ export default function NavBarResponsive () {
         </header>
       </div>
 
-      <div
+      <aside
         style={{
           transform: `translateX(-${boton ? 0 : 200}%)`,
           zIndex: '200'
         }}
-        className='w-[75%] h-[95vh] bg-slate-100 transition-transform duration-300 top-0 fixed rounded-b-md flex flex-col items-center justify-between z-[106] shadow-xl p-4 lg:hidden'
+        className='w-[75%] h-screen bg-slate-100 transition-transform duration-300 top-0 fixed rounded-b-md flex flex-col items-center justify-between z-[106] shadow-xl p-4 lg:hidden'
       >
         <div className='w-full h-32 flex flex-col justify-center items-center top-0 p-2'>
           <img className='w-28 h-auto my-3' src={iconresponsive} alt='logo' />
@@ -60,7 +60,8 @@ export default function NavBarResponsive () {
             <ImCancelCircle size={35} />
           </button>
         </div>
-      </div>
+      </aside>
+
       {boton && (
         <div className='fixed md:hidden h-full w-full bg-black/60 z-10' onClick={() => setBoton(false)} />
       )}
