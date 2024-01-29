@@ -122,8 +122,8 @@ export default function CarPage () {
         </div>
       </section>
       <section className='w-full flex flex-col sm:flex-row justify-center items-center mb-5 mt-3'>
-        <Link className='bg-green-400 hover:bg-green-500 transition-colors p-3 text-white mr-2 max-sm:mr-0 rounded-md flex items-center justify-center max-sm:my-1' href='https://wa.me/573123719021' target='_blank' rel='noreferrer'><BsWhatsapp className='mx-1' size={25} /> <p>Contactar</p></Link>
-        <Link className='bg-blue-400 hover:bg-blue-500 transition-colors p-3 text-white rounded-md flex items-center justify-center max-sm:my-1' href='/QuienesSomos/#maps'><FaMapLocationDot className='mx-1' size={25} /> <p>Ubicacion</p></Link>
+        <Link className='bg-green-400 hover:bg-green-500 transition-colors p-3 text-white mr-2 max-sm:mr-0 rounded-md flex items-center justify-center max-sm:my-1' to='https://wa.me/573123719021' target='_blank' rel='noreferrer'><BsWhatsapp className='mx-1' size={25} /> <p>Contactar</p></Link>
+        <Link className='bg-blue-400 hover:bg-blue-500 transition-colors p-3 text-white rounded-md flex items-center justify-center max-sm:my-1' to='/about#maps'><FaMapLocationDot className='mx-1' size={25} /> <p>Ubicacion</p></Link>
       </section>
     </>
   )
