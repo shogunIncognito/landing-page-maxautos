@@ -35,13 +35,8 @@ export default function CarPage () {
 
   const imagenes = car.images
 
-  if (translate >= imagenes.length * 100) {
-    setTranslate(0)
-  }
-
-  if (translate <= -100) {
-    setTranslate((imagenes.length - 1) * 100)
-  }
+  if (translate >= imagenes.length * 100) setTranslate(0)
+  if (translate <= -100) setTranslate((imagenes.length - 1) * 100)
 
   const handleClick = (e) => {
     setSelectedImage(e.target.src)
