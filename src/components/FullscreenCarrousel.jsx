@@ -24,6 +24,7 @@ export const FullscreenCarrousel = ({ data, handleClose, open, selectedImage }) 
           <Carousel
             className='w-5/6 z-[200] sm:w-3/5 md:w-3/4 lg:w-2/4 xl:w-2/4 sm:h-[90%] md:h-[90%] lg:h-[90%] 2xl:h-[90%] h-5/6'
             showControls
+            slide={false}
             leftControl={
               <span className='inline-flex h-8 w-8 items-center justify-center rounded-full bg-black/80 group-hover:bg-slate-700/50 group-focus:outline-none group-focus:ring-2 group-focus:ring-white sm:h-10 sm:w-10'>
                 <PiArrowLineLeft size={20} weight='bold' color='white' />
