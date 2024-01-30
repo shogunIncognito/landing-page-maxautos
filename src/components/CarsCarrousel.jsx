@@ -10,7 +10,7 @@ export default function CarsCarrousel () {
     <section className='relative overflow-hidden w-full px-10 py-5 flex justify-center items-center flex-col'>
       <h2 className='md:text-4xl text-2xl z-30 text-center my-7 text-white'>Nuestros últimos autos</h2>
       <Carousel className='md:w-4/5 max-w-full max-h-[36rem] z-30 2xl:h-[36rem] lg:h-[26rem]' slideInterval={4000} showControls indicators>
-        {cars.map((car, index) => (
+        {cars.slice(0, 5).map((car, index) => (
           <article key={index} className='relative text-white'>
             <img src={car.preview || car.images[0]} alt='car' className='object-cover w-full h-full' />
             <span className='absolute md:text-xl flex flex-col md:justify-end p-4 bg-black/30 w-full h-full'>

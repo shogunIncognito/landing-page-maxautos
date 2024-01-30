@@ -12,10 +12,12 @@ export default function useDisclosure (bool = false) {
 
   const handleOpen = () => setOpen(true)
   const handleClose = () => setOpen(false)
+  const handleToggle = () => setOpen(!open)
 
   return {
     open,
     handleOpen,
-    handleClose
+    handleClose,
+    handleToggle
   }
 }
