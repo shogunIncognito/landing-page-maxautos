@@ -9,6 +9,7 @@ import CarPage from './views/CarPage'
 import { AnimatePresence } from 'framer-motion'
 import AnimatedMotion from './views/AnimatedMotion'
 import { useLayoutEffect } from 'react'
+import AIChat from './components/AIChat'
 
 export default function App () {
   const location = useLocation()
@@ -21,6 +22,7 @@ export default function App () {
     <>
       <NavBar />
       <NavBarResponsive />
+      <AIChat />
       <AnimatePresence mode='wait'>
         <Routes location={location} key={location.pathname}>
           <Route index element={<AnimatedMotion><Index /></AnimatedMotion>} />
