@@ -10,11 +10,15 @@ import { BsCardText, BsWhatsapp } from 'react-icons/bs'
 import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import cars from '../mocks/cars.json'
+import { FullscreenCarrousel } from '../components/FullscreenCarrousel'
+import useDisclosure from '../hooks/useDisclosure'
 
 export default function CarPage () {
   const params = useParams()
-  const loading = false
   const [translate, setTranslate] = useState(0)
+  const { handleClose, handleOpen, open } = useDisclosure()
+  const [selectedImage, setSelectedImage] = useState('')
+  const loading = false
 
   if (loading) return <Spinner color='text-blue-600' className='h-[80dvh]' />
 
@@ -31,12 +35,12 @@ export default function CarPage () {
 
   const imagenes = car.images
 
-  if (translate >= imagenes.length * 100) {
-    setTranslate(0)
-  }
+  if (translate >= imagenes.length * 100) setTranslate(0)
+  if (translate <= -100) setTranslate((imagenes.length - 1) * 100)
 
-  if (translate <= -100) {
-    setTranslate((imagenes.length - 1) * 100)
+  const handleClick = (e) => {
+    setSelectedImage(e.target.src)
+    handleOpen()
   }
 
   return (
@@ -50,7 +54,7 @@ export default function CarPage () {
               <div className='w-full object-fill max-w-full h-full flex duration-700' style={{ transform: `translateX(-${translate}%)` }}>
                 {imagenes.map((i, index) => (
                   <div key={index} className='w-full h-full select-none min-w-full'>
-                    <img className='w-full h-full object-fill lg:object-cover object-center select-none' src={i} alt='' />
+                    <img onClick={handleClick} className='w-full h-full object-fill lg:object-cover object-center select-none' src={i} alt='' />
                   </div>
                 ))}
               </div>
@@ -125,6 +129,8 @@ export default function CarPage () {
         <Link className='bg-green-400 hover:bg-green-500 transition-colors p-3 text-white mr-2 max-sm:mr-0 rounded-md flex items-center justify-center max-sm:my-1' to='https://wa.me/573123719021' target='_blank' rel='noreferrer'><BsWhatsapp className='mx-1' size={25} /> <p>Contactar</p></Link>
         <Link className='bg-blue-400 hover:bg-blue-500 transition-colors p-3 text-white rounded-md flex items-center justify-center max-sm:my-1' to='/about#maps'><FaMapLocationDot className='mx-1' size={25} /> <p>Ubicacion</p></Link>
       </section>
+
+      <FullscreenCarrousel open={open} handleClose={handleClose} selectedImage={selectedImage} data={imagenes} />
     </>
   )
 }
