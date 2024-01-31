@@ -35,11 +35,8 @@ export default function Index () {
             <Carrusel />
           </section>
         </div>
-
-        <CarsCarrousel />
-
         <CardHero />
-
+        <CarsCarrousel />
         <section className='w-full text-center bg-white p-10'>
           <h2 className='font-bold text-2xl my-5'>SERVICIOS DE MAX AUTOS</h2>
           <Tarjetas />

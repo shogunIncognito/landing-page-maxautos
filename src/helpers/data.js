@@ -12,6 +12,7 @@ import mazda from '../assets/marcas/mazda.png'
 import jeep from '../assets/marcas/jeep.png'
 import hyundai from '../assets/marcas/hyundai.png'
 import ford from '../assets/marcas/ford.png'
+import cars from '../mocks/cars.json'
 
 export const brandsCarrousel = [
   {
@@ -113,3 +114,7 @@ export const brandsCarrousel = [
     imgUrl: 'https://fuelcarmagazine.com/wp-content/uploads/2021/11/Subaru-WRX-S4.jpg'
   }
 ]
+
+export const ultimosCars = cars.filter((i,index)=>{
+  return index < 6
+})

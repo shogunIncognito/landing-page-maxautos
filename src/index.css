@@ -186,3 +186,11 @@ html {
     background-color: #496d91;
   }
 }
+
+.imgFixed{
+  background-image: url('https://img2.wallspic.com/crops/2/0/4/3/13402/13402-vehculo_de_lujo-3840x2160.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat ;
+  background-position: center;
+}
