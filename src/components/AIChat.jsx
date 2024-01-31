@@ -87,15 +87,15 @@ export default function AIChat () {
               </motion.button>
             </div>
 
-            <div ref={messagesContainer} className='flex flex-col overflow-y-auto space-y-2 p-1'>
+            <div ref={messagesContainer} className='flex flex-col overflow-auto space-y-2 p-1'>
 
               <div className='flex mr-auto bg-gray-100 text-black max-w-[90%] rounded-lg  p-3'>
                 <p>Hola, ¿en qué puedo ayudarte?</p>
               </div>
 
               {messages.map((message, index) => (
-                <div key={index} className={`flex ${message.role === 'assistant' ? 'mr-auto bg-gray-100 text-black' : 'ml-auto bg-black text-white'} max-w-[90%] rounded-lg p-3`}>
-                  <p>{message.content}</p>
+                <div key={index} className={`flex whitespace-pre-line ${message.role === 'assistant' ? 'mr-auto bg-gray-100 text-black' : 'ml-auto bg-black text-white'} max-w-[90%] rounded-lg p-3`}>
+                  {message.content}
                 </div>
               ))}
 
