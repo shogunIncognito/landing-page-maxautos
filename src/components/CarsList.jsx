@@ -34,7 +34,7 @@ export default function CarsI ({ result }) {
         {result.map((car) => (
           <div 
             key={car.id}
-            className='bg-blue-50 w-[87%] h-[390px] flex flex-col justify-start items-center relative rounded-3xl overflow-hidden mb-3 hover:bg-blue-200 duration-1000'>
+            className='bg-blue-50 w-[87%] h-[390px] flex flex-col justify-start items-center relative rounded-3xl overflow-hidden mb-3 hover:bg-blue-200 duration-1000 shadow-md shadow-blue-200'>
               <div className='w-full h-[45%] z-[9] rounded-md overflow-hidden '>
                 <img className='w-full h-full rounded-md object-cover' src={car.preview || car.images[0]} alt="" />
               </div>
