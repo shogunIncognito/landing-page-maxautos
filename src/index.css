@@ -23,7 +23,7 @@
 }
 
 *::-webkit-scrollbar:vertical {
-  width: 8px;
+  width: 6px;
 }
 
 *::-webkit-scrollbar-button:increment,
@@ -36,7 +36,7 @@
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: rgba(49, 155, 226, 0.74);
+  background-color: rgb(95, 95, 95);
   border-radius: 10px;
 }
 

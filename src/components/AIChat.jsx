@@ -10,8 +10,9 @@ import { Avatar } from 'keep-react'
 
 export default function AIChat ({ style, text, scale, sizeRobot }) {
   const [messages, setMessages] = useState([])
-  const { open, handleClose, handleOpen } = useDisclosure()
   const [loading, setLoading] = useState(false)
+  const [error, setError] = useState(false)
+  const { open, handleClose, handleOpen } = useDisclosure()
   const messagesContainer = useRef(null)
 
   const carsToAsk = cars.map(car => {
@@ -30,9 +31,8 @@ export default function AIChat ({ style, text, scale, sizeRobot }) {
     setMessages(newMessages)
 
     askAi(carsToAsk, newMessages)
-      .then(res => {
-        setMessages(prev => [...prev, res])
-      })
+      .then(res => setMessages(prev => [...prev, res]))
+      .catch(() => setError(true))
       .finally(() => setLoading(false))
 
     e.target[0].value = ''
@@ -89,6 +89,10 @@ export default function AIChat ({ style, text, scale, sizeRobot }) {
 
             <div ref={messagesContainer} className='flex flex-col overflow-auto space-y-2 p-1'>
 
+              <div className='flex mx-auto text-center text-xs opacity-75 bg-yellow-100 max-w-[95%] rounded-lg p-3'>
+                <p>Por favor, ten en cuenta que el asistente puede cometer errores ocasionalmente. Siempre es recomendable verificar la información importante.</p>
+              </div>
+
               <div className='flex mr-auto bg-gray-100 text-black max-w-[90%] rounded-lg  p-3'>
                 <p>Hola, ¿en qué puedo ayudarte?</p>
               </div>
@@ -116,11 +120,17 @@ export default function AIChat ({ style, text, scale, sizeRobot }) {
                   </div>
                 </motion.div>
               )}
+
+              {error && (
+                <div className='flex mr-auto bg-red-100 text-red-600 max-w-[90%] rounded-lg p-3'>
+                  <p>Lo siento, ha ocurrido un error.</p>
+                </div>
+              )}
             </div>
 
             <form onSubmit={handleSubmit} className='mt-3 w-full mx-auto flex items-center space-x-2'>
-              <Input placeholder='Send a message...' className='w-3/4' />
-              <button>
+              <Input disabled={error} placeholder='Send a message...' className='w-3/4' />
+              <button disabled={error}>
                 <BsSend size={20} className='cursor-pointer' />
               </button>
             </form>
