@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import { AiFillHome } from 'react-icons/ai'
 import { FaCarAlt } from 'react-icons/fa'
+import maxautoswhite from '../assets/maxautoslogoblanco.png'
 
 export default function NavBarResponsive () {
   const [boton, setBoton] = useState(false)
@@ -14,12 +15,12 @@ export default function NavBarResponsive () {
       <div className='w-full h-16 bg-transparent max-lg:flex
        lg:hidden justify-center absolute'
       >
-        <header className='w-[97%] h-16 bg-white flex items-center justify-between fixed z-[100] px-2 shadow-lg rounded-b-xl'>
-          <button onClick={() => setBoton(!boton)} className=''>
+        <header className='w-[97%] h-16 bg-[#1DA1F2] flex items-center justify-between fixed z-[100] px-2 shadow-lg rounded-b-xl'>
+          <button onClick={() => setBoton(!boton)} className='text-white'>
             <RiMenu4Line size={35} />
           </button>
           <Link to='/'>
-            <img className='w-14 h-auto md:w-14 md:h-12' src={iconresponsive} alt='maxautos' />
+            <img className='w-16 h-auto md:w-16 md:h-12' src={maxautoswhite} alt='maxautos' />
           </Link>
         </header>
       </div>

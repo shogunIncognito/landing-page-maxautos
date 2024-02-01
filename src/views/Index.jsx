@@ -15,7 +15,7 @@ export default function Index () {
 
         <section className='w-full h-[95vh] 2xl:h-[80vh] max-h-[95vh] overflow-hidden bg-black/60 relative flex items-center justify-center text-white'>
           <div className='space-y-2 flex flex-col mx-10 text-center items-center'>
-            <img src={maxautoslogo} alt='logo' className='w-40 mb-3 h-full object-contain' />
+            {/* <img src={maxautoslogo} alt='logo' className='w-40 mb-3 h-full object-contain' /> */}
             <h1 className='text-3xl font-bold text-center tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none'>
               Encuentra el auto de tus sueños
             </h1>
