@@ -17,7 +17,7 @@ export default function About () {
         <section className='container mx-auto grid gap-8 lg:grid-cols-2'>
           <div className='flex flex-col justify-center space-y-4'>
             <h2 className='text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl'>Nuestra historia</h2>
-            <p className='text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400'>
+            <p className='text-gray-500 text-justify md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400'>
               Max-Autos es una empresa llanera con una trayectoria De más de 10 años en el sector automotriz
               que ha logrado posicionarse como marca líder en la ciudad de Villavicencio, trabajando siempre
               para satisfacer las necesidades de nuestros clientes y superar sus expectativas, haciendo cada
@@ -59,7 +59,7 @@ export default function About () {
             <h2 className='text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl'>
               Servicio al cliente y soporte
             </h2>
-            <p className='text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400'>
+            <p className='text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400 text-justify'>
               Estamos comprometidos a brindar un servicio al cliente excepcional y garantizar su satisfacción. Nuestro
               equipo siempre está disponible para ayudarlo con cualquier pregunta o inquietud.
             </p>
