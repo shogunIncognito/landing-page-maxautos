@@ -8,7 +8,7 @@ import useDisclosure from '../hooks/useDisclosure'
 import { IoClose } from 'react-icons/io5'
 import { Avatar } from 'keep-react'
 
-export default function AIChat ({style,text,scale,sizeRobot}) {
+export default function AIChat ({ style, text, scale, sizeRobot }) {
   const [messages, setMessages] = useState([])
   const { open, handleClose, handleOpen } = useDisclosure()
   const [loading, setLoading] = useState(false)
@@ -46,7 +46,7 @@ export default function AIChat ({style,text,scale,sizeRobot}) {
     <>
       <div className='flex content-center items-center justify-center justify-items-center'>
         <motion.button
-          whileHover={{ scale: scale }}
+          whileHover={{ scale }}
           onClick={handleOpen}
           className={style}
         >
