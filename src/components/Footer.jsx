@@ -3,7 +3,7 @@ import MaxIcon from '../assets/maxautoslogoblanco.png'
 
 export default function Footer () {
   return (
-    <footer className='bg-[#1DA1F2] p-6 text-white'>
+    <footer className='bg-blue-950 p-6 text-white'>
       <div className='max-w-7xl mx-auto flex-col md:flex-row gap-7 md:gap-1 flex justify-between items-center'>
         <div className='flex flex-col items-center'>
           <img className='w-32 h-auto my-4' src={MaxIcon} />
