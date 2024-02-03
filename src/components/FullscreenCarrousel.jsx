@@ -29,12 +29,12 @@ export const FullscreenCarrousel = ({ data, handleClose, open, selectedImage }) 
               <span className='inline-flex h-8 w-8 items-center justify-center rounded-full bg-black/80 group-hover:bg-slate-700/50 group-focus:outline-none group-focus:ring-2 group-focus:ring-white sm:h-10 sm:w-10'>
                 <PiArrowLineLeft size={20} weight='bold' color='white' />
               </span>
-        }
+            }
             rightControl={
               <span className='inline-flex h-8 w-8 items-center justify-center rounded-full bg-black/80 group-hover:bg-slate-700/50 group-focus:outline-none group-focus:ring-2 group-focus:ring-white sm:h-10 sm:w-10'>
                 <PiArrowLineRight size={20} weight='bold' color='white' />
               </span>
-        }
+            }
           >
             {sortByImageSelected.map((image, index) => (
               <img

@@ -44,7 +44,7 @@ export default function AIChat ({ style, text, scale, sizeRobot }) {
 
   return (
     <>
-      <div className='flex content-center items-center justify-center justify-items-center'>
+      <div className='flex content-center z-50 items-center justify-center justify-items-center'>
         <motion.button
           whileHover={{ scale }}
           onClick={handleOpen}
