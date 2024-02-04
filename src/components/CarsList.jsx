@@ -1,6 +1,6 @@
 import { RiEmotionSadLine } from 'react-icons/ri'
 import { Pagination } from 'keep-react'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { TargetCar } from './TargetCar'
 
 // la cantidad de carros por página
@@ -22,6 +22,10 @@ export default function CarsI ({ result }) {
   const startIndex = (currentPage - 1) * itemsPerPage
   const endIndex = startIndex + itemsPerPage
   const currentCars = result.slice(startIndex, endIndex)
+
+  useEffect(() => {
+    window.scrollTo({ top: 450, behavior: 'smooth' })
+  }, [currentPage])
 
   return (
     <>

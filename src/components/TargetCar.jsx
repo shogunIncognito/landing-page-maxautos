@@ -2,17 +2,28 @@ import { FaCarAlt } from 'react-icons/fa'
 import { MdOutlineAttachMoney } from 'react-icons/md'
 import { GrConfigure } from 'react-icons/gr'
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
 
 export const TargetCar = ({ carsJson }) => {
   return (
     <div className='h-full mb-14 mt-[1.5rem] grid-col-res justify-center justify-items-center xl:mx-32 md:mx-5 gap-4 p-5'>
       {carsJson.map((car) => (
-        <div
+        <motion.div
           key={car._id}
           className='bg-blue-50 w-[87%] h-[390px] flex flex-col justify-start items-center relative rounded-3xl overflow-hidden mb-3 hover:bg-blue-200 duration-1000 shadow-md shadow-blue-200'
+          initial={{ opacity: 0.5 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
         >
           <div className='w-full h-[45%] z-[9] rounded-md overflow-hidden '>
-            <img className='w-full h-full rounded-md object-cover' src={car.preview || car.images[0]} alt='' />
+            <motion.img
+              className='w-full h-full rounded-md object-cover'
+              src={car.preview || car.images[0]}
+              alt=''
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+            />
           </div>
 
           <div className='absolute w-full h-full bg-transparent flex justify-center items-end z-[10]'>
@@ -50,9 +61,8 @@ export const TargetCar = ({ carsJson }) => {
               </div>
             </div>
           </div>
-        </div>
-      )
-      )}
+        </motion.div>
+      ))}
     </div>
   )
 }

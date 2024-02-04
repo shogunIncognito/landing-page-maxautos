@@ -12,7 +12,6 @@ export default function NavBar () {
             <img className='w-[70px] h-12 invert' src={maxautoswhite} alt='logo' />
           </Link>
           <ul className='flex justify-center items-center gap-2'>
-
             {appRoutes.map((route, index) => (
               <li key={index} className={`link-animated ${path === route.path ? 'link-animated-selected' : ''} hover:bg-slate-600/20 rounded-lg transition-all duration-300 ease-in-out text-white`}>
                 <Link className='transition-all items-center gap-2 flex px-4 py-2 border-2 border-transparent' to={route.path}>
@@ -21,7 +20,6 @@ export default function NavBar () {
                 </Link>
               </li>
             ))}
-
           </ul>
         </nav>
       </header>
