@@ -8,7 +8,7 @@ export const TargetCar = ({ carsJson }) => {
     <div className='h-full mb-14 mt-[1.5rem] grid-col-res justify-center justify-items-center xl:mx-32 md:mx-5 gap-4 p-5'>
       {carsJson.map((car) => (
         <div
-          key={car.id}
+          key={car._id}
           className='bg-blue-50 w-[87%] h-[390px] flex flex-col justify-start items-center relative rounded-3xl overflow-hidden mb-3 hover:bg-blue-200 duration-1000 shadow-md shadow-blue-200'
         >
           <div className='w-full h-[45%] z-[9] rounded-md overflow-hidden '>

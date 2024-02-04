@@ -3,6 +3,9 @@ import { Pagination } from 'keep-react'
 import { useState } from 'react'
 import { TargetCar } from './TargetCar'
 
+// la cantidad de carros por página
+const itemsPerPage = 8
+
 export default function CarsI ({ result }) {
   const [currentPage, setCurrentPage] = useState(1)
 
@@ -15,23 +18,29 @@ export default function CarsI ({ result }) {
     )
   }
 
+  const totalPages = Math.ceil(result.length / itemsPerPage)
+
+  const startIndex = (currentPage - 1) * itemsPerPage
+  const endIndex = startIndex + itemsPerPage
+  const currentCars = result.slice(startIndex, endIndex)
+
   return (
     <>
       <Pagination
         className='flex my-5 justify-center items-center'
         currentPage={currentPage}
         onPageChange={setCurrentPage}
-        totalPages={20}
+        totalPages={totalPages}
         iconWithOutText
         paginateWithBorder
         prevNextShape='circle'
       />
-      <TargetCar carsJson={result} />
+      <TargetCar carsJson={currentCars} />
       <Pagination
         className='flex my-5 justify-center items-center'
         currentPage={currentPage}
         onPageChange={setCurrentPage}
-        totalPages={20}
+        totalPages={totalPages}
         iconWithOutText
         paginateWithBorder
         prevNextShape='circle'
