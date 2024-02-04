@@ -98,6 +98,7 @@ html {
 .grid-col-res {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  align-items: center;
 }
 
 .messages-container::-webkit-scrollbar {
