@@ -19,7 +19,6 @@ export default function CarsI ({ result }) {
   }
 
   const totalPages = Math.ceil(result.length / itemsPerPage)
-
   const startIndex = (currentPage - 1) * itemsPerPage
   const endIndex = startIndex + itemsPerPage
   const currentCars = result.slice(startIndex, endIndex)

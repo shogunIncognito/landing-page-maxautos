@@ -12,6 +12,27 @@ import mazda from '../assets/marcas/mazda.png'
 import jeep from '../assets/marcas/jeep.png'
 import hyundai from '../assets/marcas/hyundai.png'
 import ford from '../assets/marcas/ford.png'
+import { AiFillHome } from 'react-icons/ai'
+import { FaCarAlt } from 'react-icons/fa'
+import { RiTeamFill } from 'react-icons/ri'
+
+export const appRoutes = [
+  {
+    name: 'Inicio',
+    path: '/',
+    icon: AiFillHome
+  },
+  {
+    name: 'Nuestros Autos',
+    path: '/cars',
+    icon: FaCarAlt
+  },
+  {
+    name: 'Nosotros',
+    path: '/about',
+    icon: RiTeamFill
+  }
+]
 
 export const brandsCarrousel = [
   {
