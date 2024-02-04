@@ -9,6 +9,7 @@ export default function About () {
         <section className='container mx-auto'>
           <div className='space-y-4 text-center'>
             <h1 className='text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl'>Sobre nosotros</h1>
+            <hr className='text-blue-800' />
             <p className='mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400'>
               Aprende mas sobre nuestra concesionaria, nuestro equipo y nuestro compromiso con nuestros clientes.
             </p>

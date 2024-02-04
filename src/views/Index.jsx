@@ -37,6 +37,7 @@ export default function Index () {
         </div>
 
         <CardHero />
+
         <CarsCarrousel />
 
         <section className='w-full text-center bg-white p-10'>

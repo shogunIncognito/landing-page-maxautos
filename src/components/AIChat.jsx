@@ -129,7 +129,7 @@ export default function AIChat ({ style, text, scale, sizeRobot }) {
             </div>
 
             <form onSubmit={handleSubmit} className='mt-3 w-full mx-auto flex items-center space-x-2'>
-              <Input disabled={error} placeholder='Send a message...' className='w-3/4' />
+              <Input disabled={error} placeholder='Send a message...' className='w-full' />
               <button disabled={error}>
                 <BsSend size={20} className='cursor-pointer' />
               </button>

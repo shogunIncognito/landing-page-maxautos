@@ -20,6 +20,20 @@ export default function CarPage () {
   const [selectedImage, setSelectedImage] = useState('')
   const loading = false
 
+  // const getRandomCars = () => {
+  //   const randomCars = []
+  //   const carsCopy = [...cars]
+
+  //   while (randomCars.length < 5) {
+  //     if (carsCopy.length === 0) break
+  //     const random = Math.floor(Math.random() * carsCopy.length)
+  //     randomCars.push(carsCopy[random])
+  //     carsCopy.splice(random, 1)
+  //   }
+
+  //   return randomCars
+  // }
+
   if (loading) return <Spinner color='text-blue-600' className='h-[80dvh]' />
 
   const car = cars.find((car) => String(car._id) === params.id)
@@ -131,6 +145,15 @@ export default function CarPage () {
       </section>
 
       <FullscreenCarrousel open={open} handleClose={handleClose} selectedImage={selectedImage} data={imagenes} />
+
+      {/* <section className='flex gap-2'>
+        {getRandomCars().map(car => (
+          <div key={car._id}>
+            <h1>{car.brand} {car.line}</h1>
+            <img src={car.preview || car.images[0]} alt='' width={200} />
+          </div>
+        ))}
+      </section> */}
     </>
   )
 }
