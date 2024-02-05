@@ -12,6 +12,7 @@ import { Link, useParams } from 'react-router-dom'
 import cars from '../mocks/cars.json'
 import { FullscreenCarrousel } from '../components/FullscreenCarrousel'
 import useDisclosure from '../hooks/useDisclosure'
+import { TargetCar } from '../components/TargetCar'
 
 export default function CarPage () {
   const params = useParams()
@@ -145,14 +146,15 @@ export default function CarPage () {
 
       <FullscreenCarrousel open={open} handleClose={handleClose} selectedImage={selectedImage} data={imagenes} />
 
-      <section className='flex gap-4 justify-center my-4'>
-        {getRandomCars.map(car => (
-          <div key={car._id}>
-            <h1>{car.brand} {car.line}</h1>
-            <img src={car.preview || car.images[0]} alt='imgcar' width={200} height={200} className='max-h-[200px] max-w-[200px] object-contain' />
-          </div>
-        ))}
-      </section>
+      <div className='w-full flex flex-col justify-center items-center mt-20'>
+        <h1 className='text-4xl font-bold text-black' id='latest-vehicles'>
+          Inventario que te puede interesar
+        </h1>
+        <article className='flex flex-wrap w-full 2xl:w-[80%] justify-center items-center gap-7 my-7'>
+          <TargetCar carsJson={getRandomCars} style='w-[350px]' />
+        </article>
+      </div>
+
     </>
   )
 }

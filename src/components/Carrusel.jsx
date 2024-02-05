@@ -6,17 +6,22 @@ export default function Carrusel () {
   const router = useNavigate()
   return (
     <>
-      <motion.div id='slider-conteiner' className='my-5 w-full overflow-hidden h-[170px]'> {/* slider-conteiner */}
-        <motion.div className='flex cursor-grab hola mt-3' drag='x' dragConstraints={{ right: 0, left: -2000 }}> {/* slider */}
+      <motion.div id='slider-conteiner' className='my-5 w-full overflow-hidden h-[270px] flex items-center'> {/* slider-conteiner */}
+        <motion.div className='flex cursor-grab hola mt-3 gap-4' drag='x' dragConstraints={{ right: 0, left: -2000 }}> {/* slider */}
           {
             brandsCarrousel.map((item, index) => (
               <motion.div
                 onClick={() => router(`/cars?filter=${item.name}#catalogo`)}
                 key={index}
-                className='relative min-w-[150px] h-[100px] sm:min-w-[200px] sm:h-[150px] p-3 hover:border-2 group hover:border-solid hover:rounded-md hover:overflow-hidden border-slate-200 flex items-center justify-center hover:scale-110 transition-[1.5]'
+                className='min-w-[150px] h-[190px] border-2 border-slate-200 flex flex-col justify-center items-center rounded-[12px] pt-4 transition-[2.0] shadow-lg group hover:scale-110'
               >
-                <img className={`${item.width} ${item.height} pointer-events-none`} src={item.urlimg} />{/* item */}
-                <img className='-z-10 object-cover w-full h-full opacity-80 absolute invisible group-hover:visible' src={item.imgUrl} />
+                <motion.div className=' relative border-2 bg-slate-200 w-[120px] h-[70%] flex justify-center items-center rounded-lg group-hover:bg-blue-100  transition-[2.0] overflow-hidden'>
+                  <img className={`${item.width} ${item.height} pointer-events-none z-[11]`} src={item.urlimg} />{/* item */}
+                  {/* <img className='z-10 object-cover w-full h-full opacity-80 absolute invisible group-hover:visible' src={item.imgUrl} /> */}
+                </motion.div>
+                <div className='h-[30%] flex items-center justify-center'>
+                  <p className='capitalize'>{item.name}</p>
+                </div>
               </motion.div>
             ))
           }
@@ -25,10 +30,15 @@ export default function Carrusel () {
               <motion.div
                 onClick={() => router(`/cars?filter=${item.name}#catalogo`)}
                 key={index}
-                className='relative min-w-[150px] h-[100px] sm:min-w-[200px] sm:h-[150px] p-3 hover:border-2 group hover:border-solid hover:rounded-md hover:overflow-hidden border-slate-200 flex items-center justify-center hover:scale-110 transition-[1.5]'
+                className='relative min-w-[150px] h-[190px] border-2 border-slate-200 flex flex-col justify-center items-center rounded-[12px] pt-4 transition-[2.0] shadow-lg group hover:scale-110'
               >
-                <img className={`${item.width} ${item.height} pointer-events-none`} src={item.urlimg} />{/* item */}
-                <img className='-z-10 object-cover w-full h-full opacity-80 absolute invisible group-hover:visible' src={item.imgUrl} />
+                <motion.div className='border-2 bg-slate-200 w-[120px] h-[70%] flex justify-center items-center rounded-lg group-hover:bg-blue-100 transition-[2.0]'>
+                  <img className={`${item.width} ${item.height} pointer-events-none`} src={item.urlimg} />{/* item */}
+                  {/* <img className='-z-10 object-cover w-full h-full opacity-80 absolute invisible group-hover:visible' src={item.imgUrl} /> */}
+                </motion.div>
+                <div className='h-[30%] flex items-center justify-center'>
+                  <p className='capitalize'>{item.name}</p>
+                </div>
               </motion.div>
             ))
           }

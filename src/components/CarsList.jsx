@@ -38,7 +38,10 @@ export default function CarsI ({ result }) {
         paginateWithBorder
         prevNextShape='circle'
       />
-      <TargetCar carsJson={currentCars} />
+      <div className='h-full mb-14 mt-[1.5rem] grid-col-res justify-center justify-items-center xl:mx-32 md:mx-5 gap-4 p-5'>
+        <TargetCar carsJson={currentCars} style='w-[87%]' />
+      </div>
+
       <Pagination
         className='flex my-5 justify-center items-center'
         currentPage={currentPage}

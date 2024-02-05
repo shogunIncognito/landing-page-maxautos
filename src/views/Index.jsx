@@ -31,7 +31,6 @@ export default function Index () {
 
         <div className='w-full 2xl:w-[1536px] flex flex-col items-center justify-center'>
           <section className='w-full h-[300px] text-center pb-5 flex flex-col items-center justify-center'>
-            <h1 className='text-xl font-extrabold my-8 sm:m-5 p-3'>NUESTRAS MARCAS</h1>
             <Carrusel />
           </section>
         </div>

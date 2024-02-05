@@ -54,7 +54,7 @@
 
 .hola {
   animation: scroll 40s linear infinite;
-  width: calc(200px * 28);
+  width: calc(166px * 28);
 }
 
 @keyframes scroll {
@@ -63,7 +63,7 @@
   }
 
   100% {
-    transform: translateX(calc(-200px*14));
+    transform: translateX(calc(-166px*14));
   }
 }
 
