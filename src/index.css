@@ -189,13 +189,21 @@ html {
 }
 
 .link-animated:after {
-  display:block;
+  display: block;
   content: '';
-  border-bottom: solid 3px #019fb6;  
-  transform: scaleX(0);  
+  border-bottom: solid 3px #f7f7f7;
+  transform: scaleX(0);
   transition: transform 250ms ease-in-out;
 }
 
-.link-animated:hover:after { transform: scaleX(1); }
-.link-animated-selected:after { transform: scaleX(1); }
-.link-animated:after{  transform-origin:  0% 50%; }
+.link-animated:hover:after {
+  transform: scaleX(1);
+}
+
+.link-animated-selected:after {
+  transform: scaleX(1);
+}
+
+.link-animated:after {
+  transform-origin: 0% 50%;
+}
