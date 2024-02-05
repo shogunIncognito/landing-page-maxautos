@@ -7,7 +7,7 @@ export default function Carrusel () {
   return (
     <>
       <motion.div id='slider-conteiner' className='my-5 w-full overflow-hidden h-[270px] flex items-center'> {/* slider-conteiner */}
-        <motion.div className='flex cursor-grab hola mt-3 gap-4' drag='x' dragConstraints={{ right: 0, left: -2000 }}> {/* slider */}
+        <motion.div className='flex cursor-grab hola mt-3 gap-[60px]' drag='x' dragConstraints={{ right: 0, left: -2000 }}> {/* slider */}
           {
             brandsCarrousel.map((item, index) => (
               <motion.div
@@ -16,11 +16,11 @@ export default function Carrusel () {
                 className='min-w-[150px] h-[190px] border-2 border-slate-200 flex flex-col justify-center items-center rounded-[12px] pt-4 transition-[2.0] shadow-lg group hover:scale-110'
               >
                 <motion.div className=' relative border-2 bg-slate-200 w-[120px] h-[70%] flex justify-center items-center rounded-lg group-hover:bg-blue-100  transition-[2.0] overflow-hidden'>
-                  <img className={`${item.width} ${item.height} pointer-events-none z-[11]`} src={item.urlimg} />{/* item */}
-                  {/* <img className='z-10 object-cover w-full h-full opacity-80 absolute invisible group-hover:visible' src={item.imgUrl} /> */}
+                  <img className={`${item.width} ${item.height} pointer-events-none z-[11] group-hover:hidden`} src={item.urlimg} />{/* item */}
+                  <img className='z-10 object-cover w-full h-full opacity-80 absolute invisible group-hover:visible' src={item.imgUrl} />
                 </motion.div>
                 <div className='h-[30%] flex items-center justify-center'>
-                  <p className='capitalize'>{item.name}</p>
+                  <p className='uppercase'>{item.name}</p>
                 </div>
               </motion.div>
             ))
@@ -30,14 +30,14 @@ export default function Carrusel () {
               <motion.div
                 onClick={() => router(`/cars?filter=${item.name}#catalogo`)}
                 key={index}
-                className='relative min-w-[150px] h-[190px] border-2 border-slate-200 flex flex-col justify-center items-center rounded-[12px] pt-4 transition-[2.0] shadow-lg group hover:scale-110'
+                className='relative min-w-[150px] h-[190px] border-2 border-slate-200 flex flex-col justify-center items-center rounded-[12px] pt-4 transition-[2.0] shadow-lg group hover:scale-110 overflow-hidden'
               >
-                <motion.div className='border-2 bg-slate-200 w-[120px] h-[70%] flex justify-center items-center rounded-lg group-hover:bg-blue-100 transition-[2.0]'>
-                  <img className={`${item.width} ${item.height} pointer-events-none`} src={item.urlimg} />{/* item */}
-                  {/* <img className='-z-10 object-cover w-full h-full opacity-80 absolute invisible group-hover:visible' src={item.imgUrl} /> */}
+                <motion.div className='border-2 bg-slate-200 relative w-[120px] h-[70%] flex justify-center items-center rounded-lg group-hover:bg-blue-100 transition-[2.0]'>
+                  <img className={`${item.width} ${item.height} pointer-events-none z-[11] group-hover:hidden`} src={item.urlimg} />{/* item */}
+                  <img className='z-10 object-cover w-full h-full opacity-80 absolute invisible group-hover:visible' src={item.imgUrl} />
                 </motion.div>
                 <div className='h-[30%] flex items-center justify-center'>
-                  <p className='capitalize'>{item.name}</p>
+                  <p className='uppercase'>{item.name}</p>
                 </div>
               </motion.div>
             ))
