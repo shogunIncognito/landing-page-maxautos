@@ -27,8 +27,9 @@ export default function About () {
           </div>
           <img
             alt='Dealership Image'
-            className='aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full'
+            className='aspect-video overflow-hidden rounded-xl img-leave object-cover object-center sm:w-full'
             height='310'
+            style={{ borderRadius: '200px 20px' }}
             src={image1}
             width='550'
           />
@@ -51,8 +52,9 @@ export default function About () {
         <section className='container mx-auto grid gap-8 lg:grid-cols-2'>
           <img
             alt='Customer Service Image'
-            className='aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full'
+            className='aspect-video overflow-hidden img-leave rounded-xl object-cover object-center sm:w-full'
             height='310'
+            style={{ borderRadius: '20px 200px' }}
             src={img3}
             width='550'
           />
@@ -69,7 +71,7 @@ export default function About () {
       </section>
 
       <section className='flex lg:flex-row mt-4 p-2 flex-col'>
-        <div className='w-full lg:w-[30%] flex flex-col justify-center items-center bg-blue-400/70 font-bold rounded p-3'>
+        <div className='w-full lg:w-[30%] flex flex-col justify-center items-center bg-slate-300/80 font-bold rounded p-3'>
           <div className='bg-white shadow-lg p-4 rounded-lg w-[95%]'>
             <h2 className='text-xl font-semibold mb-3'>Horarios de Atención</h2>
             <div className='grid grid-cols-2 gap-2'>
