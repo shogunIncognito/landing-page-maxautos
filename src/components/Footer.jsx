@@ -43,7 +43,7 @@ export default function Footer () {
   )
 }
 
-function HomeIcon (props) {
+export function HomeIcon (props) {
   return (
     <svg
       {...props}
@@ -63,7 +63,7 @@ function HomeIcon (props) {
   )
 }
 
-function InstagramIcon (props) {
+export function InstagramIcon (props) {
   return (
     <svg
       {...props}
@@ -84,7 +84,7 @@ function InstagramIcon (props) {
   )
 }
 
-function LocateIcon (props) {
+export function LocateIcon (props) {
   return (
     <svg
       {...props}
