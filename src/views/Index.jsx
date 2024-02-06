@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 import Button from '../components/Button'
 import CarsCarrousel from '../components/CarsCarrousel'
 import herovideo from '../assets/maxautosvideo720.webm'
+import logo from '../assets/maxautosicon.png'
 
 export default function Index () {
   return (
@@ -23,7 +24,7 @@ export default function Index () {
               Explora nuestro catalogo de vehiculos tanto nuevos como usados.
             </p>
             <Link to='/cars'>
-              <Button className='mt-6 bg-[#212529] hover:bg-[#666666] text-[#f8f9fa]'>Explorar</Button>
+              <Button className='mt-6 bg-blue-950 hover:bg-blue-900 text-[#f8f9fa]'>Explorar</Button>
             </Link>
           </div>
           <video muted loop autoPlay playsInline className='-z-10 object-cover top-0 w-full h-screen absolute' src={herovideo} />
@@ -52,15 +53,16 @@ export default function Index () {
 
 const CardHero = () => (
   <>
-    <div className='flex md:h-[80vh] md:flex-row flex-col w-full items-center'>
-      <div className='flex flex-col items-center justify-center md:w-1/2 bg-white p-14 text-[#212529] w-full h-[50vh]'>
-        <h1 className='md:text-5xl text-3xl font-bold'>Max Autos</h1>
+    <div className='flex md:h-[80vh] md:flex-row flex-col w-full md:items-center items-end'>
+      <div className='flex flex-col items-center justify-center md:w-1/2 bg-white p-14 text-[#212529] w-full h-[50vh] gap-5 md:gap-0'>
+        {/* <h1 className='md:text-5xl text-3xl font-bold'>Max Autos</h1> */}
+        <img className='w-[100px] h-[80px] xl:w-[130px] xl:h-[100px]' src={logo} alt='MaxAutos' />
         <p className='mt-4 text-xs md:text-xl xl:text-xl 2xl:text-2xl bold opacity-75 text-wrap leading-relaxed max-w-2xl'>
           Empresa 100% Llanera dedicada a la compra y venta de vehículos usados a nivel Nacional con experiencia en el
           mercado de más de 10 años
         </p>
       </div>
-      <div className='w-[90%] h-[90%] md:w-1/2 flex justify-end items-end md:items-center content-center bg-blue-950 rounded-l-full'>
+      <div className='w-[90%] h-[90%] md:w-1/2 flex justify-end items-end md:items-center content-center bg-blue-950 rounded-l-full py-4 md:py-0'>
         <img
           alt='Vista aérea de Max Autos'
           className='h-[90%] w-[90%] rounded-l-full object-cover'
@@ -70,7 +72,7 @@ const CardHero = () => (
       </div>
     </div>
     <div className='flex md:h-[80vh] md:flex-row flex-col-reverse w-full mb-40'>
-      <div className='w-[90%] md:w-1/2 flex justify-start items-center bg-blue-950 rounded-r-full'>
+      <div className='w-[90%] md:w-1/2 flex justify-start items-center bg-blue-950 rounded-r-full py-4 md:py-0'>
         <img
           alt='Vista aérea de Max Autos'
           className='h-[90%] w-[90%] object-cover rounded-r-full'
@@ -90,5 +92,4 @@ const CardHero = () => (
       </div>
     </div>
   </>
-
 )

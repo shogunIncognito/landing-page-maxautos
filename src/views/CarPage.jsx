@@ -147,11 +147,11 @@ export default function CarPage () {
       <FullscreenCarrousel open={open} handleClose={handleClose} selectedImage={selectedImage} data={imagenes} />
 
       <div className='w-full flex flex-col justify-center items-center mt-20'>
-        <h1 className='text-4xl font-bold text-black' id='latest-vehicles'>
+        <h1 className='text-4xl font-bold text-black text-center' id='latest-vehicles'>
           Inventario que te puede interesar
         </h1>
         <article className='flex flex-wrap w-full 2xl:w-[80%] justify-center items-center gap-7 my-7'>
-          <TargetCar carsJson={getRandomCars} style='w-[350px]' />
+          <TargetCar carsJson={getRandomCars} style='w-[250px] sm:w-[350px]' />
         </article>
       </div>
 
