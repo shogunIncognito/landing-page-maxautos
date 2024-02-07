@@ -3,7 +3,8 @@ import axios from 'axios'
 const OPENAI_KEY = import.meta.env.VITE_OPENAI_KEY
 
 export const getCars = async () => {
-  return await axios.get('https://maxapi.onrender.com/api/cars')
+  const response = await axios.get('https://maxapi.onrender.com/api/cars')
+  return response.data
 }
 
 export const askAi = async (cars, messages) => {
