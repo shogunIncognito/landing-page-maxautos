@@ -14,7 +14,7 @@ export default function Cards () {
             <div className='absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center space-y-4 rounded-lg'>
               <CarIcon className='text-white w-12 h-12' />
               <div className='text-center '>
-                <p className='text-white text-lg font-semibold'>VENTA DE AUTOS DE CALIDAD</p>
+                <p className='text-white text-sm sm:text-lg font-semibold'>VENTA DE AUTOS DE CALIDAD</p>
               </div>
             </div>
           </div>
@@ -27,7 +27,7 @@ export default function Cards () {
             <div className='absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center space-y-4 rounded-lg'>
               <HeartHandshakeIcon className='text-white w-12 h-12' />
               <div className='text-center '>
-                <p className='text-white text-lg font-semibold'>COMPRAMOS TU AUTO AL MEJOR PRECIO</p>
+                <p className='text-white text-sm sm:text-lg font-semibold'>COMPRAMOS TU AUTO AL MEJOR PRECIO</p>
               </div>
             </div>
           </div>
@@ -42,7 +42,7 @@ export default function Cards () {
           <div className='absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center space-y-4 rounded-lg'>
             <LaptopIcon className='text-white w-12 h-12' />
             <div className='text-center '>
-              <p className='text-white text-lg font-semibold'>ASESORAMIENTO</p>
+              <p className='text-white text-sm sm:text-lg font-semibold'>ASESORAMIENTO</p>
             </div>
           </div>
         </div>
