@@ -6,8 +6,7 @@ const useCarsStore = create((set) => ({
   cars: [],
   loading: true,
   fetchCars: async () => {
-    // CAMBIAR DESPUES DE AJUSTAR LA OBTENCION DE AUTOS DE LOS COMPONENTES
-    if (process.env.NODE_ENV !== 'development') {
+    if (process.env.NODE_ENV === 'development') {
       set({ cars: developmentCars, loading: false })
       return
     }
