@@ -79,18 +79,6 @@
   background-position: center;
 }
 
-@media (max-width: 600px) {
-  .placeHolder::placeholder {
-    content: "Placeholder para dispositivo pequeño";
-  }
-}
-
-@media (min-width: 601px) {
-  .placeHolder::placeholder {
-    content: "Placeholder para dispositivo grande";
-  }
-}
-
 html {
   scroll-behavior: smooth;
 }

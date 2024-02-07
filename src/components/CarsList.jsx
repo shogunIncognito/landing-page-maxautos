@@ -9,6 +9,14 @@ const itemsPerPage = 8
 export default function CarsI ({ result }) {
   const [currentPage, setCurrentPage] = useState(1)
 
+  useEffect(() => {
+    window.scrollTo({ top: 450, behavior: 'smooth' })
+  }, [currentPage])
+
+  useEffect(() => {
+    setCurrentPage(1)
+  }, [result])
+
   if (result.length === 0) {
     return (
       <h1 className='text-center justify-center items-center gap-1 my-24 flex text-2xl font-bold'>
@@ -22,10 +30,6 @@ export default function CarsI ({ result }) {
   const startIndex = (currentPage - 1) * itemsPerPage
   const endIndex = startIndex + itemsPerPage
   const currentCars = result.slice(startIndex, endIndex)
-
-  useEffect(() => {
-    window.scrollTo({ top: 450, behavior: 'smooth' })
-  }, [currentPage])
 
   return (
     <>

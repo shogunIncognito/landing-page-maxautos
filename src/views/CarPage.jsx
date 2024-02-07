@@ -40,7 +40,6 @@ export default function CarPage () {
 
   const car = cars.find((car) => String(car._id) === params.id)
 
-  // temporal fix
   if (!car) return <CarNotFound />
 
   const imagenes = car.images
