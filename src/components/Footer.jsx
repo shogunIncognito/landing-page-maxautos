@@ -9,6 +9,7 @@ export default function Footer () {
           <img className='w-32 h-auto my-4' src={MaxIcon} />
           <p className='mt-2 text-md'>Usados que dan confianza</p>
         </div>
+        <hr className='border w-full md:hidden' />
         <div className='flex flex-col items-center md:items-start'>
           <h3 className='text-lg font-semibold'>CONTACTANOS</h3>
           <div className='flex items-center mt-2'>
@@ -24,6 +25,7 @@ export default function Footer () {
             <Link target='_blank' to='https://www.instagram.com/maxautosusados' className='text-sm'>maxautosusados</Link>
           </div>
         </div>
+        <hr className='border w-full md:hidden' />
         <div className='flex flex-col items-center md:items-start'>
           <div className='flex items-center'>
             <LocateIcon className='h-6 w-6 mr-2 text-white' />

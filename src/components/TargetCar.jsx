@@ -6,7 +6,6 @@ import { motion } from 'framer-motion'
 
 export const TargetCar = ({ carsJson, style }) => {
   return (
-
     carsJson.map((car) => (
       <motion.div
         key={car._id}

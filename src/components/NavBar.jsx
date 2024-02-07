@@ -7,7 +7,7 @@ import { FaWhatsapp } from 'react-icons/fa'
 export default function NavBar () {
   const path = useLocation().pathname
   return (
-    <div className='w-full bg-transparent z-30 flex-col top-0 max-lg:hidden lg:flex items-center justify-center fixed'>
+    <div className='w-full bg-transparent hidden z-30 flex-col top-0 max-lg:hidden lg:flex items-center justify-center fixed'>
 
       <div className='w-full bg-blue-900 px-10 flex justify-between text-white items-center p-3'>
         <div className='flex gap-3'>

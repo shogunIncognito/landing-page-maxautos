@@ -14,7 +14,7 @@ export default function Index () {
   return (
     <>
       {/* Contenido principal de la pagina inicial '/' */}
-      <main className='z-10 w-full flex flex-col items-center justify-center'>
+      <main className='z-10 w-full overflow-hidden flex flex-col items-center justify-center'>
 
         <section className='w-full h-[95vh] 2xl:h-[80vh] max-h-[95vh] overflow-hidden bg-black/60 relative flex items-center justify-center text-white'>
           <div className='space-y-2 flex flex-col mx-10 text-center items-center'>
