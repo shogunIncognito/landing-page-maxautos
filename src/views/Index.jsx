@@ -36,6 +36,7 @@ export default function Index () {
         </div>
 
         <CardHero />
+
         <CarsCarrousel />
 
         <section className='w-full text-center bg-white p-10'>
@@ -44,7 +45,6 @@ export default function Index () {
         </section>
 
       </main>
-
       {/* Contenido principal de la pagina inicial '/' */}
     </>
   )

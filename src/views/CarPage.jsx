@@ -9,17 +9,18 @@ import { FaMapLocationDot } from 'react-icons/fa6'
 import { BsCardText, BsWhatsapp } from 'react-icons/bs'
 import { useMemo, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import cars from '../mocks/cars.json'
 import { FullscreenCarrousel } from '../components/FullscreenCarrousel'
 import useDisclosure from '../hooks/useDisclosure'
 import { TargetCar } from '../components/TargetCar'
+import useCarsStore from '../hooks/useCarsStore'
+import CarNotFound from '../components/CarNotFound'
 
 export default function CarPage () {
   const params = useParams()
   const [translate, setTranslate] = useState(0)
   const { handleClose, handleOpen, open } = useDisclosure()
   const [selectedImage, setSelectedImage] = useState('')
-  const loading = false
+  const { cars, loading } = useCarsStore()
 
   const getRandomCars = useMemo(() => {
     const randomCars = []
@@ -33,20 +34,14 @@ export default function CarPage () {
     }
 
     return randomCars
-  }, [])
+  }, [cars])
 
   if (loading) return <Spinner color='text-blue-600' className='h-[80dvh]' />
 
   const car = cars.find((car) => String(car._id) === params.id)
 
   // temporal fix
-  if (!car) {
-    return (
-      <div className='w-full h-[80vh] flex items-center justify-center'>
-        <h1 className='text-3xl font-bold text-center'>No se encontro el auto</h1>
-      </div>
-    )
-  }
+  if (!car) return <CarNotFound />
 
   const imagenes = car.images
 

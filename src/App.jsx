@@ -8,11 +8,17 @@ import Index from './views/Index'
 import CarPage from './views/CarPage'
 import { AnimatePresence } from 'framer-motion'
 import AnimatedMotion from './views/AnimatedMotion'
-import { useLayoutEffect } from 'react'
+import { useEffect, useLayoutEffect } from 'react'
 import AIChat from './components/AIChat'
+import useCarsStore from './hooks/useCarsStore'
 
 export default function App () {
   const location = useLocation()
+  const { fetchCars } = useCarsStore()
+
+  useEffect(() => {
+    fetchCars()
+  }, [])
 
   useLayoutEffect(() => {
     window.scrollTo(0, 0)
@@ -29,7 +35,7 @@ export default function App () {
           <Route path='/cars' element={<AnimatedMotion><Cars /></AnimatedMotion>} />
           <Route path='/cars/:id' element={<AnimatedMotion><CarPage /></AnimatedMotion>} />
           <Route path='/about' element={<AnimatedMotion><About /></AnimatedMotion>} />
-          <Route path='/aichat' element={<AIChat />} />
+          <Route path='*' element={<AnimatedMotion><Index /></AnimatedMotion>} />
         </Routes>
       </AnimatePresence>
       <Footer />

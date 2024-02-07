@@ -3,15 +3,15 @@ import CarsI from '../components/CarsList'
 import Input from '../components/Input'
 import { LuSearch } from 'react-icons/lu'
 import { useEffect, useState } from 'react'
-import cars from '../mocks/cars.json'
 import { useLocation } from 'react-router-dom'
 import { CarsSkeleton } from '../components/CarsSkeleton'
+import useCarsStore from '../hooks/useCarsStore'
 
 export default function page () {
   const filterQuery = useLocation().search.split('=')[1]
   const [bus, setBus] = useState('')
   const [buscar, setBuscar] = useState('')
-  const loading = false
+  const { loading, cars } = useCarsStore()
 
   const InputChange = (e) => {
     setBus(e.target.value)
@@ -50,7 +50,7 @@ export default function page () {
 
       <section id='catalogo'>
         {loading
-          ? <CarsSkeleton />
+          ? <CarsSkeleton className='grid-col-res my-16 place-content-center' />
           : <CarsI result={filteredCars} />}
       </section>
     </>

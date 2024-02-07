@@ -1,17 +1,19 @@
-import { getBrands, getCars } from '@/services/api'
+import { getCars } from '../services/api'
 import { create } from 'zustand'
+import developmentCars from '../mocks/cars.json'
 
 const useCarsStore = create((set) => ({
   cars: [],
-  brands: [],
   loading: true,
-  addCar: (car) => set((state) => ({ cars: [...state.cars, car] })),
-  deleteCar: (id) => set((state) => ({ cars: state.cars.filter((car) => car.id !== id) })),
-  reFetch: () => {
-    Promise.all([getCars(), getBrands()])
-      .then(([cars, brands]) => set({ cars, brands }))
-      .catch((err) => console.log(err))
-      .finally(() => set({ loading: false }))
+  fetchCars: async () => {
+    // CAMBIAR DESPUES DE AJUSTAR LA OBTENCION DE AUTOS DE LOS COMPONENTES
+    if (process.env.NODE_ENV !== 'development') {
+      set({ cars: developmentCars, loading: false })
+      return
+    }
+
+    const cars = await getCars()
+    set({ cars, loading: false })
   }
 }))
 
