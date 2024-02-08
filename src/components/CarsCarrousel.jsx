@@ -25,7 +25,7 @@ export default function CarsCarrousel () {
         {loading
           ? <CarsSkeleton className='flex w-full' size={1} />
           : (
-            <Carousel indicatorsType='ring' className='md:hidden' indicators showControls>
+            <Carousel indicatorsType='ring' className='md:hidden px-5' indicators showControls>
               {carsFiltered.map(car => (
                 <article className='relative' key={car._id}>
                   <Link to={`/cars/${car._id}`}>

@@ -54,10 +54,10 @@ export default function CarPage () {
 
   return (
     <>
-      <section className='w-full px-28 h-auto grid grid-cols-1 lg:grid-cols-2 pt-10 max-md:p-0 max-md:pt-20 md:pt-24 min-[2560px]:p-36'>
+      <section className='w-full px-28 h-auto grid grid-cols-1 lg:grid-cols-2 pt-10 max-md:p-0 max-md:pt-20 md:pt-32 min-[2560px]:p-36'>
         <div className='w-full h-auto min-[420px]:h-[70vh] sm:h-[90vh] lg:h-[78vh] flex flex-col items-center justify-center pt-5'>
           <div className='w-[90%] md:w-[80%] h-full sm:w-[78%] sm:h-[88%] lg:h-[90%] min-[1920px]:w-[80%] min-[1920px]:h-[80%] min-[2560px]:w-[80%] min-[2560px]:h-[90%] mb-11 lg:mb-9'>
-            <div className='w-full max-w-fit h-[80%] border rounded-md overflow-hidden mb-2 flex items-center relative'>
+            <div className='w-full max-w-fit h-[80%] border rounded-2xl overflow-hidden mb-2 flex items-center relative'>
               <button onClick={() => setTranslate(translate - 100)} className='text-white absolute z-20 bg-slate-200 rounded-full m-2 p-1'><AiFillCaretLeft className='text-blue-400' size={20} /></button>
               <button onClick={() => setTranslate(translate + 100)} className='text-white absolute z-20 bg-slate-200 rounded-full  right-0 m-2 p-1'><AiFillCaretRight className='text-blue-400' size={20} /></button>
               <div className='w-full object-fill max-w-full h-full flex duration-700' style={{ transform: `translateX(-${translate}%)` }}>
@@ -68,10 +68,10 @@ export default function CarPage () {
                 ))}
               </div>
             </div>
-            <div className='flex h-[20%] select-none bg-neutral-200 border rounded-md overflow-x-auto p-1'>
+            <div className='flex h-[20%] select-none bg-neutral-200 border rounded-2xl overflow-x-auto p-1 '>
               {imagenes.map((i, index) => (
                 <img
-                  onClick={() => setTranslate(index * 100)} key={index + 100} className='w-[15%] cursor-pointer select-none h-full object-cover object-center rounded-md mr-1' src={i} alt=''
+                  onClick={() => setTranslate(index * 100)} key={index + 100} className='w-[15%] cursor-pointer select-none h-full object-cover object-center rounded-md mr-1 active:border-2 active:border-blue-950' src={i} alt=''
                 />
               ))}
             </div>
