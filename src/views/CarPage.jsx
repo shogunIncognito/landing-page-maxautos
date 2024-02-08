@@ -41,7 +41,7 @@ export default function CarPage () {
   const car = cars.find((car) => String(car._id) === params.id)
 
   if (!car) return <CarNotFound />
-
+  if (!car.images.length) return <CarNotFound />
   const imagenes = car.images
 
   if (translate >= imagenes.length * 100) setTranslate(0)
