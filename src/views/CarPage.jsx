@@ -26,7 +26,7 @@ export default function CarPage () {
     const randomCars = []
     const carsCopy = [...cars]
 
-    while (randomCars.length < 5) {
+    while (randomCars.length < 6) {
       if (carsCopy.length === 0) break
       const random = Math.floor(Math.random() * carsCopy.length)
       randomCars.push(carsCopy[random])
@@ -40,8 +40,8 @@ export default function CarPage () {
 
   const car = cars.find((car) => String(car._id) === params.id)
 
-  if (!car) return <CarNotFound />
-  if (!car.images.length) return <CarNotFound />
+  if (!car || !car.images.length) return <CarNotFound />
+
   const imagenes = car.images
 
   if (translate >= imagenes.length * 100) setTranslate(0)

@@ -8,7 +8,7 @@ import { Carousel } from 'keep-react'
 export default function CarsCarrousel () {
   const { cars, loading } = useCarsStore()
 
-  const carsFiltered = !loading && cars.slice(0, 5)
+  const carsFiltered = !loading && cars.slice(0, 4)
 
   return (
     <section className='w-full p-2 flex flex-col justify-center items-center'>
@@ -17,7 +17,7 @@ export default function CarsCarrousel () {
           Nuestros últimos autos
         </h2>
       </article>
-      <article className='flex flex-wrap w-full 2xl:w-[80%] justify-center items-center gap-7 my-7'>
+      <article className='flex w-full md:flex-wrap lg:flex-nowrap px-10 2xl:w-[80%] justify-center items-center gap-4 md:gap-7 my-7'>
         {/* desktop view gallery */}
         {loading ? <CarsSkeleton className='flex w-full' size={3} /> : <TargetCar carsJson={carsFiltered} style='w-[250px] sm:w-[350px] md:flex hidden' />}
 
