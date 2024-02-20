@@ -19,11 +19,11 @@ export default function CarsCarrousel () {
       </article>
       <article className='flex w-full md:flex-wrap lg:flex-nowrap px-10 2xl:w-[80%] justify-center items-center gap-4 md:gap-7 my-7'>
         {/* desktop view gallery */}
-        {loading ? <CarsSkeleton className='flex w-full' size={3} /> : <TargetCar carsJson={carsFiltered} style='w-[250px] sm:w-[350px] md:flex hidden' />}
+        {loading ? <CarsSkeleton className='w-full hidden md:flex' size={3} /> : <TargetCar carsJson={carsFiltered} style='w-[250px] sm:w-[350px] md:flex hidden' />}
 
         {/* mobile view carrousel */}
         {loading
-          ? <CarsSkeleton className='flex w-full' size={1} />
+          ? <CarsSkeleton className='flex w-full md:hidden' size={1} />
           : (
             <Carousel indicatorsType='ring' className='md:hidden px-5' indicators showControls>
               {carsFiltered.map(car => (

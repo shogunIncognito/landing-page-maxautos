@@ -19,9 +19,9 @@ export default function CarsI ({ result }) {
 
   if (result.length === 0) {
     return (
-      <h1 className='text-center justify-center items-center gap-1 my-24 flex text-2xl font-bold'>
+      <h1 className='text-center justify-center items-center gap-1.5 my-24 flex text-2xl font-bold'>
         No se encontraron resultados
-        <RiEmotionSadLine />
+        <RiEmotionSadLine size={36} />
       </h1>
     )
   }

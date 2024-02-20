@@ -30,8 +30,8 @@ export default function NavBar () {
 
       <header className='bg-blue-950 max-[1920px]:h-[70px] min-[2560px]:h-24 shadow-xl lg:flex-col md:flex-row top-0 duration-300 ease-in-out transition-all z-[60] p-4 lg:flex w-[95%] rounded-b-lg items-center hidden'>
         <nav className='m-auto w-full h-full flex justify-between items-center content-center'>
-          <Link to='/' className=''>
-            <img className='w-[70px] h-12 invert' src={maxautoswhite} alt='logo' />
+          <Link to='/'>
+            <img className='w-[76px] h-auto invert' src={maxautoswhite} alt='logo' />
           </Link>
           <ul className='flex justify-center items-center gap-2'>
             {appRoutes.map((route, index) => (

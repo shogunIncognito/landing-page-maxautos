@@ -33,7 +33,6 @@ export default function page () {
       <section className='w-full bg-transparent max-[1920px]:top-[64px] min-[2560px]:top-[91px] flex justify-center z-20'>
         <div className='flex z-20 w-[85%] lg:w-[85%] justify-center bg-blue-100 p-5 shadow-xl rounded-b-lg'>
           <Input className='max-md:text-xs h-full bg-white text-black rounded p-2 w-[60%] border-solid z-20' placeholder='Buscar por marca, linea, año y color' value={bus} onChange={inputChange} type='text' />
-          {/* <Button className='w-[10%] border-solid h-full rounded-none grid place-content-center bg-blue-500 -z-20'><LuSearch size={15} /> </Button> */}
         </div>
       </section>
 
