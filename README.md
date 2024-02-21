@@ -28,6 +28,13 @@ npm install
 yarn install
 ```
 
+## Ingresa las credenciales de OpenAi en el archivo `.env`
+En el archivo [`.env`](.env) ubicado en la raíz del proyecto para lograr el funcionamiento del chat de IA del proyecto. Dentro de las comillas coloca tu KEY proporcionada por la Api de OpenAi
+
+```env
+VITE_OPENAI_KEY=""
+```
+
 ## Iniciar proyecto
 ```bash
 npm run dev
