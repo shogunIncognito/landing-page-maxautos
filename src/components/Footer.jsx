@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import MaxIcon from '../assets/maxautoslogoblanco.png'
+import { FaArrowRight, FaGithub } from 'react-icons/fa'
 
 export default function Footer () {
   return (
@@ -41,6 +42,13 @@ export default function Footer () {
           </div>
         </div>
       </div>
+      {/* link al repositorio del proyecto */}
+      <hr className='border w-full my-3' />
+      <Link to='https://github.com/shogunIncognito/landing-page-maxautos' target='_blank' className='flex text-sm justify-center items-center gap-2' rel='noreferrer'>
+        Repositorio del proyecto
+        <FaArrowRight className='h-4 w-4' />
+        <FaGithub size={24} />
+      </Link>
     </footer>
   )
 }
