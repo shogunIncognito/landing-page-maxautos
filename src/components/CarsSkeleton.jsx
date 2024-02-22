@@ -6,7 +6,7 @@ export const CarsSkeleton = ({ className, size = 8 }) => {
     <div className={twMerge('mb-14 gap-6 flex mt-[1.5rem] md:mx-32 p-5', className)}>
       {Array.from({ length: size }).map((_, index) => (
         <Skeleton key={index} animation>
-          <div className='grid grid-cols-1 w-80 items-center mx-auto justify-center'>
+          <div className='grid grid-cols-1 w-5/6 items-center mx-auto justify-center'>
             <div className='col-span-1 flex justify-center '>
               <Skeleton.Line height='h-[120px]' />
             </div>
