@@ -103,7 +103,7 @@ const CardHero = () => {
           className='flex flex-col items-center justify-center md:w-1/2 bg-white p-14 text-[#212529]'
         >
           <h1 className='md:text-5xl text-3xl font-bold'>Max Autos</h1>
-          <p className='mt-4 text-xs md:text-xl xl:text-xl 2xl:text-2xl  bold opacity-75 text-wrap leading-relaxed max-w-2xl'>
+          <p className='mt-4 text-lg md:text-xl xl:text-xl 2xl:text-2xl  bold opacity-75 text-wrap leading-relaxed max-w-2xl'>
             Nos dedicamos a generar la mejor experiencia en la compra y venta de vehículos usados.
             Nuestra prioridad es establecer acuerdos basados en confianza, calidad, cumplimiento y
             responsabilidad, asegurando la satisfacción total de nuestros clientes.
