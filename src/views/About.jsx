@@ -27,9 +27,8 @@ export default function About () {
           </div>
           <img
             alt='Dealership Image'
-            className='aspect-video overflow-hidden rounded-xl img-leave object-cover object-center sm:w-full'
+            className='cards aspect-video overflow-hidden rounded-xl img-leave object-cover object-center sm:w-full'
             height='310'
-            style={{ borderRadius: '200px 20px' }}
             src={image1}
             width='550'
           />
@@ -53,9 +52,8 @@ export default function About () {
         <section className='container mx-auto grid gap-8 lg:grid-cols-2'>
           <img
             alt='Customer Service Image'
-            className='aspect-video overflow-hidden img-leave rounded-xl object-cover object-center sm:w-full'
+            className='cards aspect-video overflow-hidden img-leave rounded-xl object-cover object-center sm:w-full'
             height='310'
-            style={{ borderRadius: '20px 200px' }}
             src={img3}
             width='550'
           />

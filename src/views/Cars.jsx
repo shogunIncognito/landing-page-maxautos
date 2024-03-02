@@ -5,6 +5,7 @@ import { useLocation } from 'react-router-dom'
 import { CarsSkeleton } from '../components/CarsSkeleton'
 import useCarsStore from '../hooks/useCarsStore'
 import useDebounce from '../hooks/useDebounce'
+import { CiSearch } from 'react-icons/ci'
 
 export default function page () {
   const filterQuery = useLocation().search.split('=')[1]
@@ -31,8 +32,8 @@ export default function page () {
         <h1 className='text-white text-4xl font-bold'>NUESTROS  AUTOS</h1>
       </section>
       <section className='w-full bg-transparent max-[1920px]:top-[64px] min-[2560px]:top-[91px] flex justify-center z-20'>
-        <div className='flex z-20 w-[85%] lg:w-[85%] justify-center bg-blue-100 p-5 shadow-xl rounded-b-lg'>
-          <Input className='max-md:text-xs h-full bg-white text-black rounded p-2 w-[60%] border-solid z-20' placeholder='Buscar por marca, linea, año y color' value={bus} onChange={inputChange} type='text' />
+        <div className='flex z-20 w-[85%] lg:w-[85%] justify-center bg-blue-100 p-5 shadow-xl'>
+          <Input className='max-md:text-xs h-full bg-white rounded-s-md text-black p-2 w-[60%] border-solid z-20' placeholder='Buscar por marca, linea, año y color' value={bus} onChange={inputChange} type='text' />
         </div>
       </section>
 
