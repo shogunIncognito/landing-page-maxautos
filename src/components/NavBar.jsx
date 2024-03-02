@@ -2,7 +2,7 @@ import { Link, useLocation } from 'react-router-dom'
 import maxautoswhite from '../assets/maxautosicon.png'
 import { appRoutes } from '../helpers/data'
 import { InstagramIcon, LocateIcon } from './Footer'
-import { FaWhatsapp } from 'react-icons/fa'
+import { FaFacebook, FaWhatsapp } from 'react-icons/fa'
 
 export default function NavBar () {
   const path = useLocation().pathname
@@ -10,6 +10,7 @@ export default function NavBar () {
     <div className='w-full bg-transparent hidden z-30 flex-col top-0 max-lg:hidden lg:flex items-center justify-center fixed'>
 
       <div className='w-[98%] bg-slate-200 px-10 flex justify-between text-white items-center p-3 rounded-b-lg shadow-lg'>
+
         <div className='flex gap-3'>
           <div className='flex items-center'>
             <FaWhatsapp className='h-6 w-6 mr-2 text-black' />
@@ -19,13 +20,19 @@ export default function NavBar () {
             <InstagramIcon className='h-6 w-6 mr-2 text-black' />
             <Link target='_blank' to='https://www.instagram.com/maxautosusados' className='text-sm text-black'>maxautosusados</Link>
           </div>
+          <div className='flex items-center'>
+            <FaFacebook className='h-6 w-6 mr-2 text-black' />
+            <Link target='_blank' to='https://www.facebook.com/concesionariomaxautos' className='text-sm text-black'>concesionariomaxautos</Link>
+          </div>
         </div>
+
         <div className='flex items-center'>
           <div className='flex items-center'>
             <LocateIcon className='h-6 w-6 mr-2 text-black' />
             <Link to='/about#maps' className='text-sm text-black'>Cra 22 N. 4b- 27 Barrio Alborada</Link>
           </div>
         </div>
+
       </div>
 
       <header className='bg-blue-950 max-[1920px]:h-[70px] min-[2560px]:h-24 shadow-xl lg:flex-col md:flex-row top-0 duration-300 ease-in-out transition-all z-[60] p-4 lg:flex w-[95%] rounded-b-lg items-center hidden'>

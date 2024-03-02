@@ -14,6 +14,7 @@ import useDisclosure from '../hooks/useDisclosure'
 import { TargetCar } from '../components/TargetCar'
 import useCarsStore from '../hooks/useCarsStore'
 import CarNotFound from '../components/CarNotFound'
+import { Carousel } from 'keep-react'
 
 export default function CarPage () {
   const params = useParams()
@@ -145,7 +146,27 @@ export default function CarPage () {
           Inventario que te puede interesar
         </h1>
         <article className='flex flex-wrap w-full 2xl:w-[80%] justify-center items-center gap-7 my-7'>
-          <TargetCar carsJson={getRandomCars} style='w-[250px] sm:w-[350px]' />
+          {/* desktop view */}
+          <TargetCar carsJson={getRandomCars} style='w-[250px] md:flex hidden sm:w-[350px]' />
+
+          {/* mobile view carrousel */}
+          <Carousel indicatorsType='ring' className='md:hidden px-5' indicators showControls>
+            {getRandomCars.map(car => (
+              <article className='relative' key={car._id}>
+                <Link to={`/cars/${car._id}`}>
+                  <img
+                    src={car.preview || car.images[0]}
+                    alt='gallery-photo'
+                  />
+                  <div className='absolute w-full flex-col-reverse text-white top-0 rounded z-30 bg-black/40 inset-0 flex items-start justify-start p-5'>
+                    <h2>{car.brand}</h2>
+                    <h3>{car.line}</h3>
+                    <h3>{car.model}</h3>
+                  </div>
+                </Link>
+              </article>
+            ))}
+          </Carousel>
         </article>
       </div>
 
