@@ -1,7 +1,7 @@
 import { askAi } from '../services/api'
 import Input from './Input'
 import { BsRobot, BsSend } from 'react-icons/bs'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import useDisclosure from '../hooks/useDisclosure'
 import { IoClose } from 'react-icons/io5'
@@ -20,12 +20,12 @@ export default function AIChat ({ style, text, scale, sizeRobot }) {
     if (open) messagesContainer.current.scrollTop = messagesContainer.current.scrollHeight
   }, [messages])
 
-  if (carsLoading) return
-
-  const carsToAsk = cars.map(car => {
+  const carsToAsk = useMemo(() => cars.map(car => {
     const { _id, images, preview, createdAt, updatedAt, plate, description, ...restOfCar } = car
     return restOfCar
-  })
+  }), [cars])
+
+  if (carsLoading) return
 
   const handleSubmit = e => {
     e.preventDefault()
