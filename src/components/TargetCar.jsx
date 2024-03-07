@@ -9,7 +9,7 @@ export const TargetCar = ({ carsJson, style }) => {
     carsJson.map((car) => (
       <motion.div
         key={car._id}
-        className={`bg-blue-50 h-[390px] ${style} hidden flex-col justify-start items-center relative rounded-3xl overflow-hidden mb-3 hover:bg-blue-200 duration-1000 shadow-md shadow-blue-200 md:flex`}
+        className={`bg-blue-50 h-[390px] ${style} flex-col justify-start items-center relative rounded-3xl overflow-hidden mb-3 hover:bg-blue-200 duration-1000 shadow-md shadow-blue-200 flex`}
         initial={{ opacity: 0.5 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
