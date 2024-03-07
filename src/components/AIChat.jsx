@@ -1,5 +1,4 @@
 import { askAi } from '../services/api'
-import cars from '../mocks/cars.json'
 import Input from './Input'
 import { BsRobot, BsSend } from 'react-icons/bs'
 import { useEffect, useRef, useState } from 'react'
@@ -7,13 +6,21 @@ import { AnimatePresence, motion } from 'framer-motion'
 import useDisclosure from '../hooks/useDisclosure'
 import { IoClose } from 'react-icons/io5'
 import { Avatar } from 'keep-react'
+import useCarsStore from '../hooks/useCarsStore'
 
 export default function AIChat ({ style, text, scale, sizeRobot }) {
   const [messages, setMessages] = useState([])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(false)
   const { open, handleClose, handleOpen } = useDisclosure()
+  const { cars, loading: carsLoading } = useCarsStore()
   const messagesContainer = useRef(null)
+
+  useEffect(() => {
+    if (open) messagesContainer.current.scrollTop = messagesContainer.current.scrollHeight
+  }, [messages])
+
+  if (carsLoading) return
 
   const carsToAsk = cars.map(car => {
     const { _id, images, preview, createdAt, updatedAt, plate, description, ...restOfCar } = car
@@ -38,13 +45,15 @@ export default function AIChat ({ style, text, scale, sizeRobot }) {
     e.target[0].value = ''
   }
 
-  useEffect(() => {
-    if (open) messagesContainer.current.scrollTop = messagesContainer.current.scrollHeight
-  }, [messages])
-
   return (
     <>
-      <div className='flex content-center z-50 items-center justify-center justify-items-center'>
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 10 }}
+        transition={{ duration: 0.5, ease: 'easeInOut' }}
+        className='flex content-center z-50 items-center justify-center justify-items-center'
+      >
         <motion.button
           whileHover={{ scale }}
           onClick={handleOpen}
@@ -53,7 +62,7 @@ export default function AIChat ({ style, text, scale, sizeRobot }) {
           <BsRobot size={sizeRobot} />
           <h2>{text}</h2>
         </motion.button>
-      </div>
+      </motion.div>
 
       <AnimatePresence
         mode='wait'
