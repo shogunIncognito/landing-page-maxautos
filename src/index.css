@@ -74,7 +74,7 @@
 .image-cars {
   background-image: linear-gradient(0deg,
       rgba(36, 49, 54, 0.6),
-      rgba(36, 49, 54, 0.6)), url("https://sergioescobar.cl/wp-content/uploads/2020/11/Dejar-auto-en-consignacio%CC%81n_Sergio-Escobar.jpg");
+      rgba(36, 49, 54, 0.6)), url("./assets/catalogoimg.jpg");
   background-attachment: fixed;
   background-position: center;
 }

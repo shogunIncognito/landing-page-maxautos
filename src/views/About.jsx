@@ -1,4 +1,4 @@
-import image1 from '../assets/imagenmaxautos1.jpeg'
+import image1 from '../assets/imagenmaxautos1.webp'
 import { img3 } from '../assets/personal/images'
 import PhotosGallery from '../components/PhotosGallery'
 

@@ -1,3 +1,7 @@
+import cardindex1 from '../assets/cardindex1.webp'
+import cardindex2 from '../assets/cardindex2.webp'
+import cardindex3 from '../assets/cardindex3.webp'
+
 export default function Cards () {
   return (
     <div className='flex w-full h-auto md:h-[640px] rounded bg-gray-100 md:p-10 p-5'>
@@ -9,7 +13,7 @@ export default function Cards () {
             <img
               alt='Venta de autos de calidad'
               className='w-full h-full object-cover rounded-lg'
-              src='https://www.ikusi.com/mx/wp-content/uploads/sites/2/2022/06/ikusi_ikusi_image_283.jpeg'
+              src={cardindex1}
             />
             <div className='absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center space-y-4 rounded-lg'>
               <CarIcon className='text-white w-12 h-12' />
@@ -22,7 +26,7 @@ export default function Cards () {
             <img
               alt='Compramos tu auto al mejor precio'
               className='w-full h-full object-cover rounded-lg'
-              src='https://static.retail.autofact.cl/blog/20160615165912.original7202790009111910632.jpg'
+              src={cardindex3}
             />
             <div className='absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center space-y-4 rounded-lg'>
               <HeartHandshakeIcon className='text-white w-12 h-12' />
@@ -37,7 +41,7 @@ export default function Cards () {
           <img
             alt='Asesoramiento'
             className='w-full h-full object-cover rounded-lg'
-            src='https://www.bizerba.com/dam/jcr:48b58ccd-3a04-4ea8-899e-6d976442acfd/consulting_1920x1080px_image_w642_h361_retina.jpg'
+            src={cardindex2}
           />
           <div className='absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center space-y-4 rounded-lg'>
             <LaptopIcon className='text-white w-12 h-12' />
