@@ -29,8 +29,6 @@ export default function page () {
     if (filterQuery) setSearch(filterQuery)
   }, [])
 
-  console.log(filteredCars, cars)
-
   return (
     <>
       <section className='image-cars flex flex-col justify-center text-center w-full rounded-b-lg lg:h-[60vh] h-[55vh] bg-center bg-cover bg-fixed overflow-hidden'>
