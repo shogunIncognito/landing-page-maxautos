@@ -4,27 +4,32 @@ import { useEffect, useMemo, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import { CarsSkeleton } from '../components/CarsSkeleton'
 import useCarsStore from '../hooks/useCarsStore'
-import useDebounce from '../hooks/useDebounce'
 import { CiSearch } from 'react-icons/ci'
+import Button from '../components/Button'
 
 export default function page () {
   const filterQuery = useLocation().search.split('=')[1]
   const { loading, cars } = useCarsStore()
-  const [bus, setBus] = useState('')
-  const debouncedSearch = useDebounce(bus, 500)
+  const [search, setSearch] = useState('')
 
-  const inputChange = (e) => setBus(e.target.value)
+  const handleSearch = (e) => {
+    e.preventDefault()
+    setSearch(e.target[0].value)
+  }
 
   const filteredCars = useMemo(() => {
+    if (!search) return cars
     return cars.filter((car) => {
       const datoString = `${car.brand} ${car.line} ${car.model} ${car.color}`
-      return datoString.toLowerCase().includes(bus.toLowerCase())
+      return datoString.toLowerCase().includes(search.toLowerCase())
     })
-  }, [debouncedSearch])
+  }, [search, cars])
 
   useEffect(() => {
-    if (filterQuery) setBus(filterQuery)
+    if (filterQuery) setSearch(filterQuery)
   }, [])
+
+  console.log(filteredCars, cars)
 
   return (
     <>
@@ -32,9 +37,12 @@ export default function page () {
         <h1 className='text-white text-4xl font-bold'>NUESTROS  AUTOS</h1>
       </section>
       <section className='w-full bg-transparent max-[1920px]:top-[64px] min-[2560px]:top-[91px] flex justify-center z-20'>
-        <div className='flex z-20 w-[85%] lg:w-[85%] justify-center bg-blue-100 p-5 shadow-xl'>
-          <Input className='max-md:text-xs h-full bg-white rounded-s-md text-black p-2 w-[60%] border-solid z-20' placeholder='Buscar por marca, linea, año y color' value={bus} onChange={inputChange} type='text' />
-        </div>
+        <form onSubmit={handleSearch} className='flex z-20 w-[85%] lg:w-[85%] justify-center bg-blue-100 p-5 shadow-xl'>
+          <Input className='max-md:text-xs h-full bg-white rounded-none rounded-l text-black p-2 w-[60%] border-solid z-20' placeholder='Buscar por marca, linea, año y color' type='text' />
+          <Button className='w-28 border-solid h-full rounded-none rounded-r grid place-content-center bg-blue-500 -z-20'>
+            <CiSearch size={15} />
+          </Button>
+        </form>
       </section>
 
       <section id='catalogo'>
