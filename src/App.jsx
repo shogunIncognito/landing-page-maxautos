@@ -28,7 +28,7 @@ export default function App () {
     <>
       <NavBar />
       <NavBarResponsive />
-      <AIChat sizeRobot={28} scale={1.1} text='ChatIA' style='fixed z-[20] ring-2 bottom-6 right-6 bg-black text-white p-2 rounded-md flex shadow-lg justify-center items-center space-x-2 cursor-pointer' />
+      <AIChat />
       <AnimatePresence mode='wait'>
         <Routes location={location} key={location.pathname}>
           <Route index element={<AnimatedMotion><Index /></AnimatedMotion>} />

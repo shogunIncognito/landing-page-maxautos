@@ -8,7 +8,7 @@ import { IoClose } from 'react-icons/io5'
 import { Avatar } from 'keep-react'
 import useCarsStore from '../hooks/useCarsStore'
 
-export default function AIChat ({ style, text, scale, sizeRobot }) {
+export default function AIChat () {
   const [messages, setMessages] = useState([])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(false)
@@ -55,12 +55,12 @@ export default function AIChat ({ style, text, scale, sizeRobot }) {
         className='flex content-center z-50 items-center justify-center justify-items-center'
       >
         <motion.button
-          whileHover={{ scale }}
+          whileHover={{ scale: 1.1 }}
           onClick={handleOpen}
-          className={style}
+          className='fixed z-[20] ring-2 bottom-6 right-6 bg-black text-white p-2 rounded-md flex shadow-lg justify-center items-center space-x-2 cursor-pointer'
         >
-          <BsRobot size={sizeRobot} />
-          <h2>{text}</h2>
+          <BsRobot size={28} />
+          <h2>ChatIA</h2>+
         </motion.button>
       </motion.div>
 
