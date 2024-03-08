@@ -200,4 +200,8 @@ html {
   .cards {
     border-radius: 200px 20px ;
   }
+
+  .card-invert {
+    border-radius: 20px 200px;
+  }
 }

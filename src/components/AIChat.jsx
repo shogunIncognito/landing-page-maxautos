@@ -60,7 +60,7 @@ export default function AIChat () {
           className='fixed z-[20] ring-2 bottom-6 right-6 bg-black text-white p-2 rounded-md flex shadow-lg justify-center items-center space-x-2 cursor-pointer'
         >
           <BsRobot size={28} />
-          <h2>ChatIA</h2>+
+          <h2>ChatIA</h2>
         </motion.button>
       </motion.div>
 

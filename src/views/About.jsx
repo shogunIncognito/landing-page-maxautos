@@ -5,7 +5,7 @@ import PhotosGallery from '../components/PhotosGallery'
 export default function About () {
   return (
     <>
-      <section className='flex flex-col gap-16 px-4 pt-44 py-8 md:px-6 lg:gap-16'>
+      <section className='flex flex-col gap-16 px-4 pt-28 md:pt-44 py-8 md:px-6 lg:gap-16'>
         <section className='container mx-auto'>
           <div className='space-y-4 text-center'>
             <h1 className='text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl'>Sobre nosotros</h1>
@@ -52,7 +52,7 @@ export default function About () {
         <section className='container mx-auto grid gap-8 lg:grid-cols-2'>
           <img
             alt='Customer Service Image'
-            className='cards aspect-video overflow-hidden img-leave rounded-xl object-cover object-center sm:w-full'
+            className='card-invert aspect-video overflow-hidden img-leave rounded-xl object-cover object-center sm:w-full'
             height='310'
             src={img3}
             width='550'

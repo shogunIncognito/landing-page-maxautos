@@ -35,9 +35,9 @@ export default function page () {
         <h1 className='text-white text-4xl font-bold'>NUESTROS  AUTOS</h1>
       </section>
       <section className='w-full bg-transparent max-[1920px]:top-[64px] min-[2560px]:top-[91px] flex justify-center z-20'>
-        <form onSubmit={handleSearch} className='flex z-20 w-[85%] lg:w-[85%] justify-center bg-blue-100 p-5 shadow-xl'>
-          <Input className='max-md:text-xs h-full bg-white rounded-none rounded-l text-black p-2 w-[60%] border-solid z-20' placeholder='Buscar por marca, linea, año y color' type='text' />
-          <Button className='w-28 border-solid h-full rounded-none rounded-r grid place-content-center bg-blue-500 -z-20'>
+        <form onSubmit={handleSearch} className='flex z-20 w-[95%] lg:w-[85%] justify-center bg-blue-100 p-5 shadow-xl'>
+          <Input className='max-md:text-xs h-full bg-white rounded-none rounded-l text-black p-2 w-4/5 md:w-[60%] border-solid z-20' placeholder='Buscar por marca, linea, año y color' type='text' />
+          <Button className='md:w-28 w-20 border-solid h-full rounded-none rounded-r grid place-content-center bg-blue-500 -z-20'>
             <CiSearch size={15} />
           </Button>
         </form>

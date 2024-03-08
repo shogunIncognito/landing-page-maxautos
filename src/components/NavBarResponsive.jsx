@@ -16,7 +16,7 @@ export default function NavBarResponsive () {
       <div className='w-full h-16 bg-transparent max-lg:flex
        lg:hidden justify-center absolute'
       >
-        <header className='w-[97%] h-16 bg-blue-950 flex items-center justify-between fixed z-[100] px-2 shadow-lg rounded-b-xl'>
+        <header className='w-[97%] h-16 bg-blue-950 flex items-center justify-between fixed z-40 px-2 shadow-lg rounded-b-xl'>
           <button onClick={() => setBoton(!boton)} className='text-white'>
             <RiMenu4Line size={35} />
           </button>
@@ -76,7 +76,7 @@ export default function NavBarResponsive () {
       </aside>
 
       {boton && (
-        <div className='fixed md:hidden h-full w-full bg-black/60 z-10' onClick={() => setBoton(false)} />
+        <div className='fixed md:hidden h-full w-full bg-black/60 z-50' onClick={() => setBoton(false)} />
       )}
     </>
   )
