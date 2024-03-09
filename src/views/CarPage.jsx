@@ -1,11 +1,11 @@
 import Spinner from '../components/Spinner'
-import { AiOutlineTags, AiOutlineFolderOpen, AiOutlineUserSwitch, AiFillCaretRight, AiFillCaretLeft } from 'react-icons/ai'
+import { AiOutlineTags, AiOutlineFolderOpen, AiOutlineUserSwitch } from 'react-icons/ai'
 import { IoColorFilterOutline } from 'react-icons/io5'
 import { SlSpeedometer } from 'react-icons/sl'
 import { TbSettingsCheck } from 'react-icons/tb'
 import { LuFuel } from 'react-icons/lu'
 import { GrConfigure } from 'react-icons/gr'
-import { FaMapLocationDot } from 'react-icons/fa6'
+import { FaArrowLeft, FaArrowRight, FaMapLocationDot } from 'react-icons/fa6'
 import { BsWhatsapp } from 'react-icons/bs'
 import { useMemo, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
@@ -59,8 +59,8 @@ export default function CarPage () {
         <div className='w-full h-auto min-[420px]:h-[70vh] sm:h-[90vh] lg:h-[78vh] flex flex-col items-center justify-center pt-5'>
           <div className='w-[90%] md:w-[80%] h-full sm:w-[78%] sm:h-[88%] lg:h-[90%] min-[1920px]:w-[80%] min-[1920px]:h-[80%] min-[2560px]:w-[80%] min-[2560px]:h-[90%] mb-11 lg:mb-9'>
             <div className='w-full max-w-fit h-[80%] border rounded-2xl overflow-hidden mb-2 flex items-center relative'>
-              <button onClick={() => setTranslate(translate - 100)} className='text-white absolute z-20 bg-slate-200 rounded-full m-2 p-1'><AiFillCaretLeft className='text-blue-400' size={20} /></button>
-              <button onClick={() => setTranslate(translate + 100)} className='text-white absolute z-20 bg-slate-200 rounded-full  right-0 m-2 p-1'><AiFillCaretRight className='text-blue-400' size={20} /></button>
+              <button onClick={() => setTranslate(translate - 100)} className='text-white absolute z-20 bg-black/50 rounded-full m-2 p-2'><FaArrowLeft className='text-white/80' size={21} /></button>
+              <button onClick={() => setTranslate(translate + 100)} className='text-white absolute z-20 bg-black/50 rounded-full right-0 m-2 p-2'><FaArrowRight className='text-white/80' size={21} /></button>
               <div className='w-full object-fill max-w-full h-full flex duration-700' style={{ transform: `translateX(-${translate}%)` }}>
                 {imagenes.map((i, index) => (
                   <div key={index} className='w-full h-full select-none min-w-full'>
@@ -129,8 +129,8 @@ export default function CarPage () {
         </div>
       </section>
       <section className='w-full flex sm:flex-row justify-center items-center mb-5 gap-2'>
-        <Link className='bg-green-400 hover:bg-green-500 transition-colors p-4 text-white mr-2 max-sm:mr-0 rounded-md flex items-center justify-center max-sm:my-1' to='https://wa.me/573123719021' target='_blank' rel='noreferrer'><BsWhatsapp className='mx-1' size={25} /> <p>Contactar</p></Link>
-        <Link className='bg-blue-400 hover:bg-blue-500 transition-colors p-4 text-white rounded-md flex items-center justify-center max-sm:my-1' to='/about#maps'><FaMapLocationDot className='mx-1' size={25} /> <p>Ubicacion</p></Link>
+        <Link className='bg-green-500 hover:bg-green-700 transition-colors p-4 text-white mr-2 max-sm:mr-0 rounded-md flex items-center justify-center max-sm:my-1' to='https://wa.me/573123719021' target='_blank' rel='noreferrer'><BsWhatsapp className='mx-1' size={25} /> <p>Contactar</p></Link>
+        <Link className='bg-blue-950 hover:bg-blue-800 transition-colors p-4 text-white rounded-md flex items-center justify-center max-sm:my-1' to='/about#maps'><FaMapLocationDot className='mx-1' size={25} /> <p>Ubicacion</p></Link>
       </section>
 
       <FullscreenCarrousel open={open} handleClose={handleClose} selectedImage={selectedImage} data={imagenes} />

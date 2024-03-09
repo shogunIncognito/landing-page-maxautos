@@ -38,7 +38,7 @@ export default function Footer () {
           </div>
           <div className='flex items-center mt-2'>
             <HomeIcon className='h-6 w-6 mr-2 text-white' />
-            <Link to='/about#maps' className='text-sm'>Cra 22 N. 4b- 27 Barrio Alborada</Link>
+            <Link to='https://maps.app.goo.gl/pKopgjBc1bx71qyg6' target='_blank' className='text-sm'>Cra 22 N. 4b- 27 Barrio Alborada</Link>
           </div>
         </div>
       </div>

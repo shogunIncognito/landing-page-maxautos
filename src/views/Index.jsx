@@ -32,6 +32,7 @@ export default function Index () {
         </section>
 
         <div className='w-full 2xl:w-[1536px] flex flex-col items-center justify-center'>
+          <h2 className='mt-16 text-3xl font-bold opacity-60'>Nuestras marcas</h2>
           <section className='w-full h-[300px] text-center pb-5 flex flex-col items-center justify-center'>
             <Carrusel />
           </section>

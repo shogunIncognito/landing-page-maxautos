@@ -29,7 +29,7 @@ export default function NavBar () {
         <div className='flex items-center'>
           <div className='flex items-center'>
             <LocateIcon className='h-6 w-6 mr-2 text-black' />
-            <Link to='/about#maps' className='text-sm text-black'>Cra 22 N. 4b- 27 Barrio Alborada</Link>
+            <Link to='https://maps.app.goo.gl/pKopgjBc1bx71qyg6' target='_blank' className='text-sm text-black'>Cra 22 N. 4b- 27 Barrio Alborada</Link>
           </div>
         </div>
 

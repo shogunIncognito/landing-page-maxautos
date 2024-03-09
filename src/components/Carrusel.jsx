@@ -20,7 +20,7 @@ export default function Carrusel () {
                   <img alt={item.name} className='z-10 object-cover w-full h-full opacity-80 absolute invisible group-hover:visible' src={item.imgUrl} />
                 </motion.div>
                 <div className='h-[30%] flex items-center justify-center'>
-                  <p className='uppercase'>{item.name}</p>
+                  <p className='capitalize'>{item.name}</p>
                 </div>
               </motion.div>
             ))
