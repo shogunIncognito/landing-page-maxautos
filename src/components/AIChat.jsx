@@ -74,7 +74,7 @@ export default function AIChat () {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 10 }}
             transition={{ duration: 0.5, ease: 'easeInOut' }}
-            className='fixed z-[100] bottom-4 right-4 w-[260px] md:w-[400px] max-h-[460px] rounded-lg border bg-white p-4 shadow-lg flex flex-col'
+            className='fixed z-[100] bottom-4 right-4 w-[280px] md:w-[500px] max-h-[460px] rounded-lg border bg-white p-4 shadow-lg flex flex-col'
           >
             <div className='flex items-center justify-between pb-3'>
               <div className='flex items-center gap-2'>
