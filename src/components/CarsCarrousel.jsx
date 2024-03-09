@@ -17,7 +17,7 @@ export default function CarsCarrousel () {
           Nuestros últimos autos
         </h2>
       </article>
-      <article className='flex w-full md:flex-wrap lg:flex-nowrap px-10 2xl:w-[80%] justify-center items-center gap-4 md:gap-7 my-7'>
+      <article className='flex w-full md:flex-wrap lg:flex-nowrap md:px-10 2xl:w-[80%] justify-center items-center gap-4 md:gap-7 my-7'>
         {/* desktop view gallery */}
         {loading ? <CarsSkeleton className='w-full hidden md:flex' size={3} /> : <TargetCar carsJson={carsFiltered} style='w-[250px] sm:w-[350px] md:flex hidden' />}
 
@@ -27,11 +27,12 @@ export default function CarsCarrousel () {
           : (
             <Carousel indicatorsType='ring' className='md:hidden px-5' indicators showControls>
               {carsFiltered.map(car => (
-                <article className='relative' key={car._id}>
+                <article className='relative overflow-hidden' key={car._id}>
                   <Link to={`/cars/${car._id}`}>
                     <img
                       src={car.preview || car.images[0]}
                       alt='gallery-photo'
+                      className='select-none pointer-events-none'
                     />
                     <div className='absolute w-full flex-col-reverse text-white top-0 rounded z-30 bg-black/40 inset-0 flex items-start justify-start p-5'>
                       <h2>{car.brand}</h2>

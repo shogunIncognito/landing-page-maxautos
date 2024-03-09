@@ -36,7 +36,7 @@ export default function PhotosGallery () {
       {/* mobile view carrousel */}
       <Carousel indicatorsType='ring' className='md:hidden' indicators>
         {data.map((imageLink, index) => (
-          <article className='group relative' key={index} onClick={() => handleClick(imageLink)}>
+          <article className='group relative overflow-hidden' key={index} onClick={() => handleClick(imageLink)}>
             <img
               src={imageLink}
               alt='gallery-photo'

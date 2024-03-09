@@ -22,7 +22,7 @@ export const FullscreenCarrousel = ({ data, handleClose, open, selectedImage }) 
         >
           <IoMdClose size={38} color='white' className='absolute top-4 right-4 cursor-pointer' onClick={handleClose} />
           <Carousel
-            className='w-5/6 z-[200] sm:w-3/5 md:w-3/4 lg:w-2/4 xl:w-2/4 sm:h-[90%] md:h-[90%] lg:h-[90%] 2xl:h-[90%] h-5/6'
+            className='w-5/6 z-[200] sm:w-4/5 md:w-3/4 lg:w-2/4 xl:w-2/4 xl:h-3/4 sm:h-[90%] md:h-[90%] lg:h-[90%] 2xl:h-[90%] h-5/6'
             showControls
             slide={false}
             leftControl={
