@@ -64,7 +64,7 @@ export default function CarPage () {
               <div className='w-full object-fill max-w-full h-full flex duration-700' style={{ transform: `translateX(-${translate}%)` }}>
                 {imagenes.map((i, index) => (
                   <div key={index} className='w-full h-full select-none min-w-full'>
-                    <img onClick={handleClick} className='w-full h-full object-fill lg:object-cover object-center select-none' src={i} alt='' />
+                    <img onClick={handleClick} className='w-full h-full object-fill lg:object-cover object-center select-none' src={i} alt='Imagen auto' />
                   </div>
                 ))}
               </div>
@@ -72,7 +72,9 @@ export default function CarPage () {
             <div className='flex h-[20%] select-none bg-neutral-200 border rounded-2xl overflow-x-auto p-1 '>
               {imagenes.map((i, index) => (
                 <img
-                  onClick={() => setTranslate(index * 100)} key={index + 100} className='w-[15%] cursor-pointer select-none h-full object-cover object-center rounded-md mr-1 active:border-2 active:border-blue-950' src={i} alt=''
+                  alt='Imagen auto'
+                  onClick={() => setTranslate(index * 100)} key={index + 100}
+                  className='w-[15%] cursor-pointer select-none h-full object-cover object-center rounded-md mr-1 active:border-2 active:border-blue-950' src={i}
                 />
               ))}
             </div>

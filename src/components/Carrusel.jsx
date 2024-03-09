@@ -15,9 +15,9 @@ export default function Carrusel () {
                 key={index}
                 className='min-w-[150px] h-[190px] border-2 border-slate-200 flex flex-col justify-center items-center rounded-[12px] pt-4 transition-[2.0] shadow-lg group hover:scale-110'
               >
-                <motion.div className=' relative border-2 bg-slate-200 w-[120px] h-[70%] flex justify-center items-center rounded-lg group-hover:bg-blue-100  transition-[2.0] overflow-hidden'>
-                  <img className={`${item.width} ${item.height} pointer-events-none z-[11] group-hover:hidden`} src={item.urlimg} />{/* item */}
-                  <img className='z-10 object-cover w-full h-full opacity-80 absolute invisible group-hover:visible' src={item.imgUrl} />
+                <motion.div className='relative border-2 bg-slate-200 w-[120px] h-[70%] flex justify-center items-center rounded-lg group-hover:bg-blue-100  transition-[2.0] overflow-hidden'>
+                  <img alt={item.name} className={`${item.width} ${item.height} pointer-events-none z-[11] group-hover:hidden`} src={item.urlimg} />{/* item */}
+                  <img alt={item.name} className='z-10 object-cover w-full h-full opacity-80 absolute invisible group-hover:visible' src={item.imgUrl} />
                 </motion.div>
                 <div className='h-[30%] flex items-center justify-center'>
                   <p className='uppercase'>{item.name}</p>
@@ -33,8 +33,8 @@ export default function Carrusel () {
                 className='relative min-w-[150px] h-[190px] border-2 border-slate-200 flex flex-col justify-center items-center rounded-[12px] pt-4 transition-[2.0] shadow-lg group hover:scale-110 overflow-hidden'
               >
                 <motion.div className='border-2 bg-slate-200 relative w-[120px] h-[70%] flex justify-center items-center rounded-lg group-hover:bg-blue-100 transition-[2.0] overflow-hidden'>
-                  <img className={`${item.width} ${item.height} pointer-events-none z-[11] group-hover:hidden`} src={item.urlimg} />{/* item */}
-                  <img className='z-10 object-cover w-full h-full opacity-80 absolute invisible group-hover:visible' src={item.imgUrl} />
+                  <img alt={item.name} className={`${item.width} ${item.height} pointer-events-none z-[11] group-hover:hidden`} src={item.urlimg} />{/* item */}
+                  <img alt={item.name} className='z-10 object-cover w-full h-full opacity-80 absolute invisible group-hover:visible' src={item.imgUrl} />
                 </motion.div>
                 <div className='h-[30%] flex items-center justify-center'>
                   <p className='uppercase'>{item.name}</p>
