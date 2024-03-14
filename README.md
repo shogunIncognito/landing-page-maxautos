@@ -1,6 +1,6 @@
 # MaxApp Proyecto
 
-![MaxLogo-dark](src/assets/maxautoslogoblanco.png#gh-dark-mode-only)![MaxLogo-light](src/assets/maxautosicon.png#gh-dark-mode-only#gh-light-mode-only)
+![MaxLogo-dark](src/assets/maxautoslogoblanco.webp#gh-dark-mode-only)![MaxLogo-light](src/assets/maxautosicon.webp#gh-dark-mode-only#gh-light-mode-only)
 
 Aplicación para la concesionaria MaxAutos como proyecto final desarrollada en colaboración por [shogunIncognito](https://github.com/shogunIncognito) y [EmersonRoncancio](https://github.com/EmersonRoncancio).
 

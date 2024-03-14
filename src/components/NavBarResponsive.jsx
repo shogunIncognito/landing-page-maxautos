@@ -1,11 +1,11 @@
 import { RiMenu4Line, RiTeamFill } from 'react-icons/ri'
 import { ImCancelCircle } from 'react-icons/im'
-import iconresponsive from '../assets/maxautosicon.png'
+import iconresponsive from '../assets/maxautosicon.webp'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import { AiFillHome } from 'react-icons/ai'
 import { FaCarAlt, FaWhatsapp } from 'react-icons/fa'
-import maxautoswhite from '../assets/maxautoslogoblanco.png'
+import maxautoswhite from '../assets/maxautoslogoblanco.webp'
 import { InstagramIcon } from './Footer'
 
 export default function NavBarResponsive () {

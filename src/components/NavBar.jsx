@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom'
-import maxautoswhite from '../assets/maxautosicon.png'
+import maxautoswhite from '../assets/maxautosicon.webp'
 import { appRoutes } from '../helpers/data'
 import { InstagramIcon, LocateIcon } from './Footer'
 import { FaFacebook, FaWhatsapp } from 'react-icons/fa'

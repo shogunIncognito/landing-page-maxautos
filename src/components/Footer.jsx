@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import MaxIcon from '../assets/maxautoslogoblanco.png'
+import MaxIcon from '../assets/maxautoslogoblanco.webp'
 import { FaArrowRight, FaGithub } from 'react-icons/fa'
 
 export default function Footer () {

@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 import Button from '../components/Button'
 import CarsCarrousel from '../components/CarsCarrousel'
 import herovideo from '../assets/maxautosvideo720.webm'
-import logo from '../assets/maxautosicon.png'
+import logo from '../assets/maxautosicon.webp'
 import { useRef } from 'react'
 import { useInView } from 'framer-motion'
 
