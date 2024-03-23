@@ -34,12 +34,15 @@ export default function AIChat () {
     if (!inputValue) return
 
     setLoading(true)
+    setError(false)
     const newMessages = [...messages, { role: 'user', content: inputValue }]
     setMessages(newMessages)
 
     askAi(carsToAsk, newMessages)
       .then(res => setMessages(prev => [...prev, res]))
-      .catch(() => setError(true))
+      .catch((err) => {
+        return setError(err.response.data.error.code === 'rate_limit_exceeded' ? 'Por favor espera 30 segundos antes de enviar otro mensaje.' : 'Ha ocurrido un error.')
+      })
       .finally(() => setLoading(false))
 
     e.target[0].value = ''
@@ -132,14 +135,14 @@ export default function AIChat () {
 
               {error && (
                 <div className='flex mr-auto bg-red-100 text-red-600 max-w-[90%] rounded-lg p-3'>
-                  <p>Lo siento, ha ocurrido un error.</p>
+                  <p>{error}</p>
                 </div>
               )}
             </div>
 
             <form onSubmit={handleSubmit} className='mt-3 w-full mx-auto flex items-center space-x-2'>
-              <Input disabled={error} placeholder='Send a message...' className='w-full' />
-              <button disabled={error}>
+              <Input disabled={loading} placeholder='Send a message...' className='w-full' />
+              <button disabled={loading}>
                 <BsSend size={20} className='cursor-pointer' />
               </button>
             </form>
