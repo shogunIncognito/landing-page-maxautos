@@ -29,29 +29,6 @@
     "updatedAt": "2024-01-25T16:22:40.372Z"
   },
   {
-    "_id": "65b28ad0c771c002daac6331",
-    "brand": "Ford",
-    "model": 2023,
-    "description": "",
-    "line": "Captiva samurai",
-    "kilometers": 53000,
-    "images": [
-      "https://firebasestorage.googleapis.com/v0/b/adminpanelphotos.appspot.com/o/images%2FproyectoWebMaxautos%2FGhostrunner_2022.07.19-18.10.42.png_FUD748?alt=media&token=4995bc13-84a9-46c1-9ee3-127660aea71d",
-      "https://firebasestorage.googleapis.com/v0/b/adminpanelphotos.appspot.com/o/images%2FproyectoWebMaxautos%2FIMG-20231027-WA0008.jpeg_FUD748?alt=media&token=9f2814f4-7209-44f7-bc89-215c713814a5"
-    ],
-    "price": 77999999,
-    "preview": "https://firebasestorage.googleapis.com/v0/b/adminpanelphotos.appspot.com/o/images%2FproyectoWebMaxautos%2FIMG-20231027-WA0008.jpeg_FUD748?alt=media&token=9f2814f4-7209-44f7-bc89-215c713814a5",
-    "fuel": "corriente",
-    "transmission": "manual",
-    "cc": 1.8,
-    "type": "automovil",
-    "owners": 1,
-    "plate": "FUD748",
-    "color": "Negro",
-    "createdAt": "2024-01-25T16:22:40.372Z",
-    "updatedAt": "2024-01-25T16:22:40.372Z"
-  },
-  {
     "_id": "65b28ad0c771c002daac632b",
     "brand": "Chevrolet",
     "model": 2016,

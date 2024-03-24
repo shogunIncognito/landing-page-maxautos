@@ -55,7 +55,7 @@ export default function CarPage () {
 
   return (
     <>
-      <section className='w-full px-28 h-auto grid grid-cols-1 lg:grid-cols-2 pt-10 max-md:p-0 max-md:pt-20 md:pt-32 min-[2560px]:p-36'>
+      <section className='w-full md:px-16 lg:px-10 xl:px-28 h-auto grid grid-cols-1 lg:grid-cols-2 pt-10 max-md:p-0 max-md:pt-20 md:pt-32 min-[2560px]:p-36'>
         <div className='w-full h-auto min-[420px]:h-[70vh] sm:h-[90vh] lg:h-[78vh] flex flex-col items-center justify-center pt-5'>
           <div className='w-[90%] md:w-[80%] h-full sm:w-[78%] sm:h-[88%] lg:h-[90%] min-[1920px]:w-[80%] min-[1920px]:h-[80%] min-[2560px]:w-[80%] min-[2560px]:h-[90%] mb-11 lg:mb-9'>
             <div className='w-full max-w-fit h-[80%] border rounded-2xl overflow-hidden mb-2 flex items-center relative'>
@@ -74,7 +74,7 @@ export default function CarPage () {
                 <img
                   alt='Imagen auto'
                   onClick={() => setTranslate(index * 100)} key={index + 100}
-                  className='w-[15%] cursor-pointer select-none h-full object-cover object-center rounded-md mr-1 active:border-2 active:border-blue-950' src={i}
+                  className='w-[18%] cursor-pointer select-none h-full object-cover object-center rounded-md mr-1 active:border-2 active:border-blue-950' src={i}
                 />
               ))}
             </div>
@@ -84,8 +84,8 @@ export default function CarPage () {
         <div className='w-full h-auto min-[420px]:h-[70vh] sm:h-[90vh] lg:h-[78vh] flex flex-col items-center justify-center pt-5 justify-items-center content-center'>
           <div className='w-[90%] md:w-[80%] h-full sm:w-[78%] sm:h-[88%] lg:h-[80%] min-[1920px]:w-[80%] min-[1920px]:h-[80%] min-[2560px]:w-[80%] min-[2560px]:h-[90%] mb-11 lg:mb-9 flex flex-col justify-center items-center'>
             <div className='w-full h-auto flex flex-col justify-center items-center sm:items-start border-b-2 border-blue-800 py-2'>
-              <h2 className=' font-semibold text-2xl min-[1920px]:text-4xl min-[2560px]:text-5xl'>{car.brand} {car.line}</h2>
-              <h2 className=' font-extralight text-2xl min-[1920px]:text-4xl min-[2560px]:text-5xl'><span className='text-green-400'>$</span> {Math.round(car.price).toLocaleString()}</h2>
+              <h2 className='font-semibold text-2xl min-[1920px]:text-4xl mb-2 min-[2560px]:text-5xl'>{car.brand} {car.line}</h2>
+              <h2 className='font-extralight text-2xl min-[1920px]:text-4xl min-[2560px]:text-5xl'><span className='text-green-500'>$</span> {Math.round(car.price).toLocaleString()} <span className='text-green-600'>*</span> </h2>
             </div>
             <div className='w-full h-auto flex flex-row items-center content-center p-2'>
               <div className='w-[50%] h-auto mr-2'>
@@ -130,7 +130,7 @@ export default function CarPage () {
       </section>
       <section className='w-full flex sm:flex-row justify-center items-center mb-5 gap-2'>
         <Link className='bg-green-500 hover:bg-green-700 transition-colors p-4 text-white mr-2 max-sm:mr-0 rounded-md flex items-center justify-center max-sm:my-1' to='https://wa.me/573123719021' target='_blank' rel='noreferrer'><BsWhatsapp className='mx-1' size={25} /> <p>Contactar</p></Link>
-        <Link className='bg-blue-950 hover:bg-blue-800 transition-colors p-4 text-white rounded-md flex items-center justify-center max-sm:my-1' to='/about#maps'><FaMapLocationDot className='mx-1' size={25} /> <p>Ubicacion</p></Link>
+        <Link className='bg-blue-950 hover:bg-blue-800 transition-colors p-4 text-white rounded-md flex items-center justify-center max-sm:my-1' target='_blank' to='https://maps.app.goo.gl/pKopgjBc1bx71qyg6'><FaMapLocationDot className='mx-1' size={25} /> <p>Ubicacion</p></Link>
       </section>
 
       <FullscreenCarrousel open={open} handleClose={handleClose} selectedImage={selectedImage} data={imagenes} />
