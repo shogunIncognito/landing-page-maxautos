@@ -41,5 +41,6 @@ export const checkVisitor = () => {
     return
   }
 
-  axios.post('https://maxapi-rrlvs.ondigitalocean.app/api/stats')
+  const time = new Date().getTime()
+  axios.post('https://maxapi-rrlvs.ondigitalocean.app/api/stats', { time })
 }
