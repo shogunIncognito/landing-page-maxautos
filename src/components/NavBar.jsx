@@ -14,7 +14,7 @@ export default function NavBar () {
         <div className='flex gap-3'>
           <div className='flex items-center'>
             <FaWhatsapp className='h-6 w-6 mr-2 text-black' />
-            <Link to='https://wa.me/573123719021' target='_blank' className='text-sm text-black' rel='noreferrer'>+57 312 3719021</Link>
+            <Link to='https://wa.link/p4wx5x' target='_blank' className='text-sm text-black' rel='noreferrer'>+57 312 3719021</Link>
           </div>
           <div className='flex items-center'>
             <InstagramIcon className='h-6 w-6 mr-2 text-black' />

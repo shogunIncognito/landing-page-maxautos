@@ -61,7 +61,7 @@ export default function NavBarResponsive () {
         <div onClick={() => setBoton(false)} className='w-full h-20 flex-col flex justify-center items-center bottom-0 p-2'>
           {/* redes sociales */}
           <div className='flex gap-3 mb-5'>
-            <a href='https://wa.me/573123719021' target='_blank' rel='noreferrer'>
+            <a href='https://wa.link/p4wx5x' target='_blank' rel='noreferrer'>
               <FaWhatsapp size={24} />
             </a>
             <a href='https://www.instagram.com/maxautosusados' target='_blank' rel='noreferrer'>
