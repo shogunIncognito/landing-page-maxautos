@@ -3,7 +3,7 @@ import axios from 'axios'
 const OPENAI_KEY = import.meta.env.VITE_OPENAI_KEY
 
 export const getCars = async () => {
-  const response = await axios.get('https://maxapi-rrlvs.ondigitalocean.app/api/cars')
+  const response = await axios.get('https://maxapi-rrlvs.ondigitalocean.app/api/cars/all')
   return response.data.filter(car => car.show)
 }
 
