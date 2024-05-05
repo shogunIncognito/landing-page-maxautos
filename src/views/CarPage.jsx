@@ -25,7 +25,7 @@ export default function CarPage () {
 
   const getRandomCars = useMemo(() => {
     const randomCars = []
-    const carsCopy = [...cars]
+    const carsCopy = [...cars].filter(car => car._id !== params.id)
 
     while (randomCars.length < 6) {
       if (carsCopy.length === 0) break
