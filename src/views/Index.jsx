@@ -3,7 +3,7 @@ import Tarjetas from '../components/Tarjetas'
 import { Link } from 'react-router-dom'
 import Button from '../components/Button'
 import CarsCarrousel from '../components/CarsCarrousel'
-import logo from '../assets/NuevoLog.png'
+import logo from '../assets/logonuevo.png'
 import { useRef } from 'react'
 import { useInView } from 'framer-motion'
 

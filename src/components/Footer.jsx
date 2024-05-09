@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import MaxIcon from '../assets/NuevoLog.png'
+import MaxIcon from '../assets/logonuevo.png'
 
 export default function Footer () {
   return (

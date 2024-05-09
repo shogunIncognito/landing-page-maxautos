@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import { AiFillHome } from 'react-icons/ai'
 import { FaCarAlt, FaWhatsapp } from 'react-icons/fa'
-import maxautoswhite from '../assets/NuevoLog.png'
+import maxautoswhite from '../assets/logonuevo.png'
 import { InstagramIcon } from './Footer'
 
 export default function NavBarResponsive () {
