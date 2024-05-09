@@ -1,5 +1,3 @@
-import image1 from '../assets/imagenmaxautos1.webp'
-import { img3 } from '../assets/personal/images'
 import PhotosGallery from '../components/PhotosGallery'
 
 export default function About () {
@@ -19,7 +17,7 @@ export default function About () {
           <div className='flex flex-col justify-center space-y-4'>
             <h2 className='text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl'>Nuestra historia</h2>
             <p className='text-gray-500 text-justify md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400'>
-              Max-Autos es una empresa llanera con una trayectoria De más de 10 años en el sector automotriz
+              Carsllen es una empresa llanera con una trayectoria De más de 10 años en el sector automotriz
               que ha logrado posicionarse como marca líder en la ciudad de Villavicencio, trabajando siempre
               para satisfacer las necesidades de nuestros clientes y superar sus expectativas, haciendo cada
               vez más clientes felices.
@@ -29,7 +27,7 @@ export default function About () {
             alt='Dealership Image'
             className='cards aspect-video overflow-hidden rounded-xl img-leave object-cover object-center sm:w-full'
             height='310'
-            src={image1}
+            src='https://www.qhubocali.com/wp-content/uploads/2022/09/WhatsApp-Image-2022-09-19-at-11.18.41-AM-1024x576.jpeg'
             width='550'
           />
         </section>
@@ -54,7 +52,7 @@ export default function About () {
             alt='Customer Service Image'
             className='card-invert aspect-video overflow-hidden img-leave rounded-xl object-cover object-center sm:w-full'
             height='310'
-            src={img3}
+            src='https://asopartes.com/wp-content/uploads/2023/05/20230511-CONCESIONARIOS-RENAULT-TOYOTA-NISSAN-MERCEDES-BENZ-COLOMBIA-DEALERS-MAYO-2023-01.jpg'
             width='550'
           />
           <div className='flex flex-col justify-center space-y-4'>

@@ -1,12 +1,9 @@
 import Carrusel from '../components/Carrusel'
 import Tarjetas from '../components/Tarjetas'
-import img from '../assets/maxHero1.webp'
-import img2 from '../assets/imagenmaxautos1.webp'
 import { Link } from 'react-router-dom'
 import Button from '../components/Button'
 import CarsCarrousel from '../components/CarsCarrousel'
-import herovideo from '../assets/maxautosvideo720.webm'
-import logo from '../assets/maxautosicon.webp'
+import logo from '../assets/NuevoLog.png'
 import { useRef } from 'react'
 import { useInView } from 'framer-motion'
 
@@ -28,7 +25,7 @@ export default function Index () {
               <Button className='mt-6 bg-blue-950 hover:bg-blue-900 text-[#f8f9fa]'>Explorar</Button>
             </Link>
           </div>
-          <video muted loop autoPlay playsInline className='-z-10 object-cover top-0 w-full h-screen absolute' src={herovideo} />
+          <video muted loop autoPlay playsInline className='-z-10 object-cover top-0 w-full h-screen absolute' src='https://cdn.pixabay.com/video/2019/06/01/24125-340670601_large.mp4' />
         </section>
 
         <div className='w-full 2xl:w-[1536px] flex flex-col items-center justify-center'>
@@ -43,7 +40,7 @@ export default function Index () {
         <CarsCarrousel />
 
         <section className='w-full text-center bg-white p-10'>
-          <h2 className='font-bold text-2xl my-5'>SERVICIOS DE MAX AUTOS</h2>
+          <h2 className='font-bold text-2xl my-5'>SERVICIOS DE CARSLLEN</h2>
           <Tarjetas />
         </section>
 
@@ -72,8 +69,9 @@ const CardHero = () => {
           {/* <h1 className='md:text-5xl text-3xl font-bold'>Max Autos</h1> */}
           <img className='w-[100px] h-auto xl:w-[150px]' src={logo} alt='MaxAutos' />
           <p className='mt-4 text-lg md:text-xl xl:text-xl 2xl:text-2xl bold opacity-75 text-wrap leading-relaxed max-w-2xl'>
-            Empresa 100% Llanera dedicada a la compra y venta de vehículos usados a nivel Nacional con experiencia en el
-            mercado de más de 10 años
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro architecto sapiente numquam voluptates
+            eius voluptatibus dignissimos voluptas dolorum neque atque iste, harum nulla animi, dolorem minima
+            soluta? Dolorum, culpa animi.
           </p>
         </div>
         <div className='w-[90%] h-[90%] md:w-1/2 flex justify-end items-end md:items-center content-center bg-blue-950 rounded-l-full py-4 md:py-0'>
@@ -81,7 +79,7 @@ const CardHero = () => {
             alt='Vista aérea de Max Autos'
             className='h-[90%] w-[90%] rounded-l-full object-cover'
             height='1080'
-            src={img}
+            src='https://loscoches.com/wp-content/uploads/2020/12/concesionario-carros-ventajas.jpg'
           />
         </div>
       </div>
@@ -90,7 +88,7 @@ const CardHero = () => {
           <img
             alt='Vista aérea de Max Autos'
             className='h-[90%] w-[90%] object-cover rounded-r-full'
-            src={img2}
+            src='https://static.retail.autofact.cl/blog/c_img_740x370.rvx1jqias07p.jpg'
           />
         </div>
         <div
@@ -102,11 +100,11 @@ const CardHero = () => {
           }}
           className='flex flex-col items-center justify-center md:w-1/2 bg-white p-14 text-[#212529]'
         >
-          <h1 className='md:text-5xl text-3xl font-bold'>Max Autos</h1>
+          <h1 className='md:text-5xl text-3xl font-bold'>Carsllen</h1>
           <p className='mt-4 text-lg md:text-xl xl:text-xl 2xl:text-2xl  bold opacity-75 text-wrap leading-relaxed max-w-2xl'>
-            Nos dedicamos a generar la mejor experiencia en la compra y venta de vehículos usados.
-            Nuestra prioridad es establecer acuerdos basados en confianza, calidad, cumplimiento y
-            responsabilidad, asegurando la satisfacción total de nuestros clientes.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro architecto sapiente numquam voluptates
+            eius voluptatibus dignissimos voluptas dolorum neque atque iste, harum nulla animi, dolorem minima
+            soluta? Dolorum, culpa animi.
           </p>
           <Link to='/about'>
             <Button className='mt-6 hover:bg-blue-900 text-[#f8f9fa] bg-blue-950'>Conoce más</Button>

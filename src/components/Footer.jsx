@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import MaxIcon from '../assets/maxautoslogoblanco.webp'
+import MaxIcon from '../assets/NuevoLog.png'
 
 export default function Footer () {
   return (
@@ -14,15 +14,15 @@ export default function Footer () {
           <h3 className='text-lg font-semibold'>CONTACTANOS</h3>
           <div className='flex items-center mt-2'>
             <MailIcon className='h-6 w-6 mr-2 text-white' />
-            <Link to='mailto:maxautosmb53@gmail.com' target='_blank' className='text-sm' rel='noreferrer'>maxautosmb53@gmail.com</Link>
+            <Link className='text-sm' rel='noreferrer'>carsllen@gmail.com</Link>
           </div>
           <div className='flex items-center mt-2'>
             <PhoneIcon className='h-6 w-6 mr-2 text-white' />
-            <Link to='https://wa.link/p4wx5x' target='_blank' className='text-sm' rel='noreferrer'>+57 312 3719021</Link>
+            <Link className='text-sm' rel='noreferrer'>Telefono de la empresa</Link>
           </div>
           <div className='flex items-center mt-2'>
             <InstagramIcon className='h-6 w-6 mr-2 text-white' />
-            <Link target='_blank' to='https://www.instagram.com/maxautosusados' className='text-sm'>maxautosusados</Link>
+            <Link className='text-sm'>@carsllen</Link>
           </div>
         </div>
         <hr className='border w-full md:hidden' />
@@ -37,7 +37,7 @@ export default function Footer () {
           </div>
           <div className='flex items-center mt-2'>
             <HomeIcon className='h-6 w-6 mr-2 text-white' />
-            <Link to='https://maps.app.goo.gl/pKopgjBc1bx71qyg6' target='_blank' className='text-sm'>Cra 22 N. 4b- 27 Barrio Alborada</Link>
+            <Link className='text-sm'>Direccion de la empresa</Link>
           </div>
         </div>
       </div>

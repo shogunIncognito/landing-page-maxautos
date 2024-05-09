@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom'
-import maxautoswhite from '../assets/maxautosicon.webp'
+import maxautoswhite from '../assets/Nuevolog.png'
 import { appRoutes } from '../helpers/data'
 import { InstagramIcon, LocateIcon } from './Footer'
 import { FaFacebook, FaWhatsapp } from 'react-icons/fa'
@@ -14,22 +14,22 @@ export default function NavBar () {
         <div className='flex gap-3'>
           <div className='flex items-center'>
             <FaWhatsapp className='h-6 w-6 mr-2 text-black' />
-            <Link to='https://wa.link/p4wx5x' target='_blank' className='text-sm text-black' rel='noreferrer'>+57 312 3719021</Link>
+            <Link className='text-sm text-black' rel='noreferrer'>+57 Telefono De La Empresa</Link>
           </div>
           <div className='flex items-center'>
             <InstagramIcon className='h-6 w-6 mr-2 text-black' />
-            <Link target='_blank' to='https://www.instagram.com/maxautosusados' className='text-sm text-black'>maxautosusados</Link>
+            <Link className='text-sm text-black'>@carsllen</Link>
           </div>
           <div className='flex items-center'>
             <FaFacebook className='h-6 w-6 mr-2 text-black' />
-            <Link target='_blank' to='https://www.facebook.com/concesionariomaxautos' className='text-sm text-black'>concesionariomaxautos</Link>
+            <Link className='text-sm text-black'>concesiocarsllen</Link>
           </div>
         </div>
 
         <div className='flex items-center'>
           <div className='flex items-center'>
             <LocateIcon className='h-6 w-6 mr-2 text-black' />
-            <Link to='https://maps.app.goo.gl/pKopgjBc1bx71qyg6' target='_blank' className='text-sm text-black'>Cra 22 N. 4b- 27 Barrio Alborada</Link>
+            <Link className='text-sm text-black'>Direccion de la Empresa</Link>
           </div>
         </div>
 
@@ -38,7 +38,7 @@ export default function NavBar () {
       <header className='bg-blue-950 max-[1920px]:h-[70px] min-[2560px]:h-24 shadow-xl lg:flex-col md:flex-row top-0 duration-300 ease-in-out transition-all z-[60] p-4 lg:flex w-[95%] rounded-b-lg items-center hidden'>
         <nav className='m-auto w-full h-full flex justify-between items-center content-center'>
           <Link to='/'>
-            <img className='w-[76px] h-auto invert' src={maxautoswhite} alt='logo' />
+            <img className='w-[76px] h-auto' src={maxautoswhite} alt='logo' />
           </Link>
           <ul className='flex justify-center items-center gap-2'>
             {appRoutes.map((route, index) => (

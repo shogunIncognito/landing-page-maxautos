@@ -1,11 +1,10 @@
 import { RiMenu4Line, RiTeamFill } from 'react-icons/ri'
 import { ImCancelCircle } from 'react-icons/im'
-import iconresponsive from '../assets/maxautosicon.webp'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import { AiFillHome } from 'react-icons/ai'
 import { FaCarAlt, FaWhatsapp } from 'react-icons/fa'
-import maxautoswhite from '../assets/maxautoslogoblanco.webp'
+import maxautoswhite from '../assets/NuevoLog.png'
 import { InstagramIcon } from './Footer'
 
 export default function NavBarResponsive () {
@@ -34,7 +33,7 @@ export default function NavBarResponsive () {
         className='w-[75%] h-screen bg-slate-100 transition-transform duration-300 top-0 fixed rounded-b-md flex flex-col z-[106] shadow-xl p-4 lg:hidden'
       >
         <div className='w-full h-32 flex flex-col justify-center items-center top-0 p-2'>
-          <img className='w-28 h-auto my-3' src={iconresponsive} alt='logo' />
+          <img className='w-28 h-auto my-3' src={maxautoswhite} alt='logo' />
           <hr className='w-full text-black' />
         </div>
         <div className='w-full flex-1 gap-2 mt-5 flex flex-col items-start'>
