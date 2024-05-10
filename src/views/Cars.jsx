@@ -9,13 +9,13 @@ import { useRef } from 'react'
 
 export default function page () {
   const filterQuery = useLocation().search.split('=')[1]
-  const { loading, cars, getCars } = useFetchCars(`?page=1&limit=4&search=${filterQuery || ''}`)
+  const { loading, cars, getCars } = useFetchCars(`?page=1&limit=10&show=true&search=${filterQuery || ''}`)
   const search = useRef('')
 
   const handleSearch = (e) => {
     e.preventDefault()
     search.current = e.target[0].value
-    getCars(`?page=1&limit=4&search=${e.target[0].value}`)
+    getCars(`?page=1&limit=10&show=true&search=${e.target[0].value}`)
   }
 
   return (

@@ -6,7 +6,7 @@ import { Carousel } from 'keep-react'
 import useFetchCars from '../hooks/useFetchCars'
 
 export default function CarsCarrousel () {
-  const { cars, loading } = useFetchCars('?page=1&limit=4')
+  const { cars, loading } = useFetchCars('?page=1&limit=4&show=true')
 
   return (
     <section className='w-full p-2 flex flex-col justify-center items-center'>

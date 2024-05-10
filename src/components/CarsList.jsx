@@ -9,7 +9,7 @@ export default function CarsI ({ cars, totalPages, currentPage, getCars, search 
   }, [currentPage])
 
   const handlePageChange = (page) => {
-    getCars(`?page=${page}&limit=4&search=${search.current || ''}`)
+    getCars(`?page=${page}&limit=10&show=true&search=${search.current || ''}`)
   }
 
   if (cars.length === 0) {
