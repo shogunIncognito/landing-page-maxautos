@@ -4,9 +4,9 @@ import { GrConfigure } from 'react-icons/gr'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
-export const TargetCar = ({ carsJson, style }) => {
+export const TargetCar = ({ cars, style }) => {
   return (
-    carsJson.map((car) => (
+    cars.map((car) => (
       <motion.div
         key={car._id}
         className={`bg-blue-50 h-[390px] ${style} flex-col justify-start items-center relative rounded-3xl overflow-hidden mb-3 hover:bg-blue-200 duration-1000 shadow-md shadow-blue-200 flex`}

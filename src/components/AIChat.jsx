@@ -6,14 +6,14 @@ import { AnimatePresence, motion } from 'framer-motion'
 import useDisclosure from '../hooks/useDisclosure'
 import { IoClose } from 'react-icons/io5'
 import { Avatar } from 'keep-react'
-import useCarsStore from '../hooks/useCarsStore'
+import useFetchCars from '../hooks/useFetchCars'
 
 export default function AIChat () {
   const [messages, setMessages] = useState([])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(false)
   const { open, handleClose, handleOpen } = useDisclosure()
-  const { cars, loading: carsLoading } = useCarsStore()
+  const { cars, loading: carsLoading } = useFetchCars('all')
   const messagesContainer = useRef(null)
 
   useEffect(() => {
@@ -141,7 +141,7 @@ export default function AIChat () {
             </div>
 
             <form onSubmit={handleSubmit} className='mt-3 w-full mx-auto flex items-center space-x-2'>
-              <Input disabled={loading} placeholder='Send a message...' className='w-full' />
+              <Input disabled={loading} maxLength={200} placeholder='Envia un mensaje...' className='w-full' />
               <button disabled={loading}>
                 <BsSend size={20} className='cursor-pointer' />
               </button>

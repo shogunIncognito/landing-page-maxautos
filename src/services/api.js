@@ -2,11 +2,6 @@ import axios from 'axios'
 
 const OPENAI_KEY = import.meta.env.VITE_OPENAI_KEY
 
-export const getCars = async () => {
-  const response = await axios.get('https://maxapi-rrlvs.ondigitalocean.app/api/cars/all')
-  return response.data.filter(car => car.show)
-}
-
 export const askAi = async (cars, messages) => {
   const response = await axios.post('https://api.openai.com/v1/chat/completions', {
     model: 'gpt-3.5-turbo',

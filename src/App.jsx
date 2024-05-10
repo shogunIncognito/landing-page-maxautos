@@ -10,15 +10,12 @@ import { AnimatePresence } from 'framer-motion'
 import AnimatedMotion from './views/AnimatedMotion'
 import { useEffect, useLayoutEffect } from 'react'
 import AIChat from './components/AIChat'
-import useCarsStore from './hooks/useCarsStore'
 import { checkVisitor } from './services/api'
 
 export default function App () {
   const location = useLocation()
-  const { fetchCars } = useCarsStore()
 
   useEffect(() => {
-    fetchCars()
     checkVisitor()
   }, [])
 

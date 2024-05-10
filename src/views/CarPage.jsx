@@ -12,20 +12,22 @@ import { Link, useParams } from 'react-router-dom'
 import { FullscreenCarrousel } from '../components/FullscreenCarrousel'
 import useDisclosure from '../hooks/useDisclosure'
 import { TargetCar } from '../components/TargetCar'
-import useCarsStore from '../hooks/useCarsStore'
 import CarNotFound from '../components/CarNotFound'
 import { Carousel } from 'keep-react'
+import useFetchCars from '../hooks/useFetchCars'
 
 export default function CarPage () {
   const params = useParams()
   const [translate, setTranslate] = useState(0)
   const { handleClose, handleOpen, open } = useDisclosure()
   const [selectedImage, setSelectedImage] = useState('')
-  const { cars, loading } = useCarsStore()
+  const { cars: car, loading: carLoading } = useFetchCars(params.id)
+  const { cars, loading } = useFetchCars()
 
   const getRandomCars = useMemo(() => {
     const randomCars = []
-    const carsCopy = [...cars].filter(car => car._id !== params.id)
+    if (!cars.result) return randomCars
+    const carsCopy = [...cars.result].filter(car => car._id !== params.id)
 
     while (randomCars.length < 6) {
       if (carsCopy.length === 0) break
@@ -37,9 +39,7 @@ export default function CarPage () {
     return randomCars
   }, [cars])
 
-  if (loading) return <Spinner color='text-blue-600' className='h-[80dvh]' />
-
-  const car = cars.find((car) => String(car._id) === params.id)
+  if (loading || carLoading) return <Spinner color='text-blue-600' className='h-[80dvh]' />
 
   if (!car || !car.images.length) return <CarNotFound />
 
@@ -141,7 +141,7 @@ export default function CarPage () {
         </h1>
         <article className='flex flex-wrap w-full 2xl:w-[80%] justify-center items-center gap-7 my-7'>
           {/* desktop view */}
-          <TargetCar carsJson={getRandomCars} style='w-[250px] md:flex hidden sm:w-[350px]' />
+          <TargetCar cars={getRandomCars} style='w-[250px] md:flex hidden sm:w-[350px]' />
 
           {/* mobile view carrousel */}
           <Carousel indicatorsType='ring' className='md:hidden px-5' indicators showControls>

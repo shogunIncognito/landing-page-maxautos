@@ -1,33 +1,22 @@
 import CarsList from '../components/CarsList'
 import Input from '../components/Input'
-import { useEffect, useMemo, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import { CarsSkeleton } from '../components/CarsSkeleton'
-import useCarsStore from '../hooks/useCarsStore'
 import Button from '../components/Button'
 import { IoSearch } from 'react-icons/io5'
+import useFetchCars from '../hooks/useFetchCars'
+import { useRef } from 'react'
 
 export default function page () {
   const filterQuery = useLocation().search.split('=')[1]
-  const { loading, cars } = useCarsStore()
-  const [search, setSearch] = useState('')
+  const { loading, cars, getCars } = useFetchCars(`?page=1&limit=4&search=${filterQuery || ''}`)
+  const search = useRef('')
 
   const handleSearch = (e) => {
     e.preventDefault()
-    setSearch(e.target[0].value)
+    search.current = e.target[0].value
+    getCars(`?page=1&limit=4&search=${e.target[0].value}`)
   }
-
-  const filteredCars = useMemo(() => {
-    if (!search) return cars
-    return cars.filter((car) => {
-      const datoString = `${car.brand} ${car.line} ${car.model} ${car.color}`
-      return datoString.toLowerCase().includes(search.toLowerCase())
-    })
-  }, [search, cars])
-
-  useEffect(() => {
-    if (filterQuery) setSearch(filterQuery)
-  }, [])
 
   return (
     <>
@@ -46,7 +35,12 @@ export default function page () {
       <section id='catalogo'>
         {loading
           ? <CarsSkeleton className='grid-col-res my-16 place-content-center' />
-          : <CarsList result={filteredCars} />}
+          : <CarsList
+              cars={cars.result}
+              currentPage={cars.currentPage}
+              totalPages={cars.totalPages} getCars={getCars}
+              search={search}
+            />}
       </section>
     </>
 
