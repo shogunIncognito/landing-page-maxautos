@@ -7,6 +7,7 @@ import useDisclosure from '../hooks/useDisclosure'
 import { IoClose } from 'react-icons/io5'
 import { Avatar } from 'keep-react'
 import useFetchCars from '../hooks/useFetchCars'
+import Markdown from 'react-markdown'
 
 export default function AIChat () {
   const [messages, setMessages] = useState([])
@@ -21,7 +22,7 @@ export default function AIChat () {
   }, [messages])
 
   const carsToAsk = useMemo(() => cars.map(car => {
-    const { _id, images, preview, createdAt, updatedAt, plate, description, ...restOfCar } = car
+    const { images, preview, createdAt, updatedAt, plate, description, ...restOfCar } = car
     return restOfCar
   }), [cars])
 
@@ -110,8 +111,10 @@ export default function AIChat () {
               </div>
 
               {messages.map((message, index) => (
-                <div key={index} className={`flex whitespace-pre-line ${message.role === 'assistant' ? 'mr-auto bg-gray-100 text-black' : 'ml-auto bg-black text-white'} max-w-[90%] rounded-lg p-3`}>
-                  {message.content}
+                <div key={index} className={`flex ${message.role === 'assistant' ? 'mr-auto bg-gray-100 text-black' : 'ml-auto bg-black text-white'} max-w-[90%] rounded-lg p-3`}>
+                  <div>
+                    <Markdown>{message.content}</Markdown>
+                  </div>
                 </div>
               ))}
 
