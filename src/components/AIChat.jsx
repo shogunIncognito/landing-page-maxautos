@@ -19,7 +19,12 @@ export default function AIChat () {
 
   useEffect(() => {
     if (open) messagesContainer.current.scrollTop = messagesContainer.current.scrollHeight
-  }, [messages])
+  }, [messages, open])
+
+  useEffect(() => {
+    const sessionChat = JSON.parse(window.sessionStorage.getItem('messages')) || []
+    setMessages(sessionChat)
+  }, [])
 
   const carsToAsk = useMemo(() => cars.map(car => {
     const { images, preview, createdAt, updatedAt, plate, description, ...restOfCar } = car
@@ -36,11 +41,15 @@ export default function AIChat () {
 
     setLoading(true)
     setError(false)
+
     const newMessages = [...messages, { role: 'user', content: inputValue }]
     setMessages(newMessages)
 
     askAi(carsToAsk, newMessages)
-      .then(res => setMessages(prev => [...prev, res]))
+      .then(res => {
+        setMessages(prev => [...prev, res])
+        window.sessionStorage.setItem('messages', JSON.stringify([...newMessages, res]))
+      })
       .catch((err) => {
         return setError(err.response.data.error.code === 'rate_limit_exceeded' ? 'Por favor espera 30 segundos antes de enviar otro mensaje.' : 'Ha ocurrido un error.')
       })
