@@ -22,7 +22,7 @@ export default function CarPage () {
   const { handleClose, handleOpen, open } = useDisclosure()
   const [selectedImage, setSelectedImage] = useState('')
   const { cars: car, loading: carLoading } = useFetchCars(params.id)
-  const { cars, loading } = useFetchCars()
+  const { cars, loading } = useFetchCars('?show=true')
 
   const getRandomCars = useMemo(() => {
     const randomCars = []
