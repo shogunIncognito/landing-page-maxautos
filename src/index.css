@@ -59,11 +59,11 @@
 
 @keyframes scroll {
   0% {
-    transform: translateX(0);
+    transform: translateX(12);
   }
 
   100% {
-    transform: translateX(calc(-210px*14));
+    transform: translateX(calc(-210px*6));
   }
 }
 
