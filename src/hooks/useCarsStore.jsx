@@ -6,7 +6,7 @@ const useCarsStore = create((set) => ({
   cars: [],
   loading: true,
   fetchCars: async () => {
-    if (process.env.NODE_ENV === 'development') {
+    if (process.env.NODE_ENV !== 'development') {
       set({ cars: developmentCars, loading: false })
       return
     }

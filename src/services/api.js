@@ -3,8 +3,8 @@ import axios from 'axios'
 const OPENAI_KEY = import.meta.env.VITE_OPENAI_KEY
 
 export const getCars = async () => {
-  const response = await axios.get('https://maxapi-rrlvs.ondigitalocean.app/api/cars/all')
-  return response.data.filter(car => car.show)
+  const response = await axios.get('http://localhost:3001/api/cars')
+  return response.data
 }
 
 export const askAi = async (cars, messages) => {
@@ -36,11 +36,4 @@ export const askAi = async (cars, messages) => {
   return response.data.choices[0].message
 }
 
-export const checkVisitor = () => {
-  if (process.env.NODE_ENV === 'development') {
-    return
-  }
-
-  const time = new Date().getTime()
-  axios.post('https://maxapi-rrlvs.ondigitalocean.app/api/stats', { time })
-}
+export const checkVisitor = () => { }
