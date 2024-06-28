@@ -1,8 +1,11 @@
 import image1 from '../assets/imagenmaxautos1.webp'
 import { img3 } from '../assets/personal/images'
 import PhotosGallery from '../components/PhotosGallery'
+import * as images from '../assets/personal/images'
 
 export default function About () {
+  const data = Object.entries(images).map((image) => image[1])
+
   return (
     <>
       <section className='flex flex-col gap-16 px-4 pt-28 md:pt-44 py-8 md:px-6 lg:gap-16'>
@@ -35,7 +38,7 @@ export default function About () {
         </section>
 
         <section id='weare' className='w-full flex-col max-sm:py-5 max-sm:p-0 pt-8 min-[2560px]:p-36 h-auto flex items-center justify-center'>
-          <PhotosGallery />
+          <PhotosGallery images={data} />
         </section>
 
         <section className='container mx-auto my-16'>

@@ -9,8 +9,11 @@ import herovideo from '../assets/maxautosvideo720.webm'
 import logo from '../assets/maxautosicon.webp'
 import { useRef } from 'react'
 import { useInView } from 'framer-motion'
+import PhotosGallery from '../components/PhotosGallery'
+import * as data from '../assets/clientes/images'
 
 export default function Index () {
+  const clientImages = Object.entries(data).map((image) => image[1])
   return (
     <>
       {/* Contenido principal de la pagina inicial '/' */}
@@ -22,7 +25,7 @@ export default function Index () {
               Encuentra el auto de tus sueños
             </h1>
             <p className='mx-auto max-w-[700px] text-gray-300 md:text-xl dark:text-gray-400'>
-              Explora nuestro catalogo de vehiculos tanto nuevos como usados.
+              Explora nuestro catalogo de vehículos tanto nuevos como usados.
             </p>
             <Link to='/cars'>
               <Button className='mt-6 bg-blue-950 hover:bg-blue-900 text-[#f8f9fa]'>Explorar</Button>
@@ -41,6 +44,11 @@ export default function Index () {
         <CardHero />
 
         <CarsCarrousel />
+
+        <section className='w-full p-5 flex-col max-sm:py-5 max-sm:p-0 pt-8 min-[2560px]:p-36 h-auto flex items-center justify-center'>
+          <h2 className='font-bold text-2xl my-5'>CLIENTES FELICES</h2>
+          <PhotosGallery images={clientImages} />
+        </section>
 
         <section className='w-full text-center bg-white p-10'>
           <h2 className='font-bold text-2xl my-5'>SERVICIOS DE MAX AUTOS</h2>
