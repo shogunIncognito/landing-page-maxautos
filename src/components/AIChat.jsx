@@ -1,12 +1,11 @@
 import { askAi } from '../services/api'
 import Input from './Input'
 import { BsRobot, BsSend } from 'react-icons/bs'
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import useDisclosure from '../hooks/useDisclosure'
 import { IoClose } from 'react-icons/io5'
 import { Avatar } from 'keep-react'
-import useFetchCars from '../hooks/useFetchCars'
 import Markdown from 'react-markdown'
 
 export default function AIChat () {
@@ -14,7 +13,6 @@ export default function AIChat () {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(false)
   const { open, handleClose, handleOpen } = useDisclosure()
-  const { cars, loading: carsLoading } = useFetchCars('all')
   const messagesContainer = useRef(null)
 
   useEffect(() => {
@@ -25,13 +23,6 @@ export default function AIChat () {
     const sessionChat = JSON.parse(window.sessionStorage.getItem('messages')) || []
     setMessages(sessionChat)
   }, [])
-
-  const carsToAsk = useMemo(() => cars.map(car => {
-    const { images, preview, createdAt, updatedAt, plate, description, ...restOfCar } = car
-    return restOfCar
-  }), [cars])
-
-  if (carsLoading) return
 
   const handleSubmit = e => {
     e.preventDefault()
@@ -45,7 +36,7 @@ export default function AIChat () {
     const newMessages = [...messages, { role: 'user', content: inputValue }]
     setMessages(newMessages)
 
-    askAi(carsToAsk, newMessages)
+    askAi(newMessages)
       .then(res => {
         setMessages(prev => [...prev, res])
         window.sessionStorage.setItem('messages', JSON.stringify([...newMessages, res]))
