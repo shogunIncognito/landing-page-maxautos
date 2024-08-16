@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 export const askAi = async (messages) => {
-  const response = await axios.post('http://localhost:3001/api/openai', {
+  const response = await axios.post('https://maxapi-rrlvs.ondigitalocean.app/api/openai', {
     messages
   })
   return response.data
