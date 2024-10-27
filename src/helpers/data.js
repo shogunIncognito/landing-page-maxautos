@@ -150,3 +150,12 @@ export const brandsCarrousel = [
     imgUrl: subaruHover
   }
 ]
+
+const year = new Date().getFullYear()
+const ages = []
+
+for (let i = 0; i <= 14; i++) {
+  ages.push(year - i)
+}
+
+export { ages }
