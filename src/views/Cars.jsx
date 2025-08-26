@@ -17,7 +17,7 @@ export default function page() {
   const search = useRef('')
 
   useEffect(() => {
-    axios.get('https://maxapi-rrlvs.ondigitalocean.app/api/cars/brands')
+    axios.get('https://maxapi.onrender.com/api/cars/brands')
       .then(brand => setBrands(brand.data))
       .catch(err => console.log(err))
   }, [])
@@ -67,12 +67,14 @@ export default function page() {
       <section id='catalogo'>
         {loading
           ? <CarsSkeleton className='grid-col-res my-16 place-content-center' />
-          : <CarsList
-            cars={cars.result}
-            currentPage={cars.currentPage}
-            totalPages={cars.totalPages} getCars={getCars}
-            search={search}
-          />}
+          : cars.result
+            ? <CarsList
+              cars={cars.result}
+              currentPage={cars.currentPage}
+              totalPages={cars.totalPages} getCars={getCars}
+              search={search}
+            />
+            : <h2 className='text-center my-20'>No hay vehiculos</h2>}
       </section>
     </>
 

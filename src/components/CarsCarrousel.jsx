@@ -5,8 +5,12 @@ import { Link } from 'react-router-dom'
 import { Carousel } from 'keep-react'
 import useFetchCars from '../hooks/useFetchCars'
 
-export default function CarsCarrousel () {
+export default function CarsCarrousel() {
   const { cars, loading } = useFetchCars('?page=1&limit=4&show=true')
+
+  if (!cars.result) {
+    return null
+  }
 
   return (
     <section className='w-full p-2 flex flex-col justify-center items-center'>
@@ -24,7 +28,7 @@ export default function CarsCarrousel () {
           ? <CarsSkeleton className='flex w-full md:hidden' size={1} />
           : (
             <Carousel indicatorsType='ring' className='md:hidden px-5' indicators showControls>
-              {cars.result.map(car => (
+              {cars.result?.map(car => (
                 <article className='relative overflow-hidden' key={car._id}>
                   <Link to={`/cars/${car._id}`}>
                     <img
@@ -41,7 +45,7 @@ export default function CarsCarrousel () {
                 </article>
               ))}
             </Carousel>
-            )}
+          )}
 
       </article>
       <Link to='/cars'>

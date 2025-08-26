@@ -1,9 +1,9 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 
-const API_CARS_URL = 'https://maxapi-rrlvs.ondigitalocean.app/api/cars/'
+const API_CARS_URL = 'https://maxapi.onrender.com/api/cars/'
 
-export default function useFetchCars (query = '') {
+export default function useFetchCars(query = '') {
   const [cars, setCars] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
